@@ -5,50 +5,50 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "footer-0": {
+        "footer-bathroom": {
           "type": "link_list",
           "settings": {
-            "heading": "Our Concept",
-            "menu": "footer"
+            "heading": "Bathroom",
+            "menu": "footer-bathroom"
           }
         },
-        "footer-1": {
+        "footer-kitchen-laundry": {
           "type": "link_list",
           "settings": {
-            "heading": "Explore",
-            "menu": "explore"
+            "heading": "Kitchen & Laundry",
+            "menu": "footer-kitchen-laundry"
           }
         },
-        "footer-2": {
+        "footer-info": {
           "type": "link_list",
           "settings": {
-            "heading": "More",
-            "menu": "more"
+            "heading": "Information",
+            "menu": "footer-info"
           }
         }
       },
       "block_order": [
-        "footer-0",
-        "footer-1",
-        "footer-2"
+        "footer-bathroom",
+        "footer-kitchen-laundry",
+        "footer-info"
       ],
       "settings": {
         "show_divider": true,
         "newsletter_enable": true,
-        "newsletter_heading": "Exclusive benefits",
-        "newsletter_text": "<p>Apply for our free membership to receive exclusive deals, news, and events.</p>",
+        "newsletter_heading": "Stay in the Loop",
+        "newsletter_text": "<p>Get the latest products, promotions, and renovation inspiration.</p>",
         "show_social": true,
         "social_heading": "",
-        "enable_country_selector": true,
-        "enable_language_selector": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
         "payment_enable": true,
         "show_policy": true,
-        "copyright_text": "All rights reserved.",
-        "colors_text": "#42474c",
-        "colors_heading": "#6b7177",
-        "colors_link": "#212326",
-        "colors_border": "#d2d5d9",
-        "colors_background": "#ffffff",
+        "copyright_text": "© 2025 Aspire Bathrooms. All rights reserved.",
+        "colors_text": "#cccccc",
+        "colors_heading": "#ffffff",
+        "colors_link": "#e0dbd5",
+        "colors_border": "#5c5c5c",
+        "colors_background": "#4c4c4c",
         "gradient_background": ""
       }
     }

@@ -6,23 +6,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is **Be Yours** (v8.7.0), a Shopify Online Store 2.0 theme by RoarTheme. There is no build system — all assets are raw JS/CSS files deployed directly to Shopify. Changes are pushed to a live store using the Shopify CLI.
 
-## Deployment Commands
+## Deployment
+
+This theme is connected to Shopify via GitHub integration. Pushing commits to the repository automatically deploys the changes to the live Shopify store — no Shopify CLI push needed.
 
 ```bash
-# Push all changes to the connected Shopify store
-shopify theme push
-
-# Push to a specific store/environment
-shopify theme push --store <store-handle>
-
-# Preview changes without pushing (live reload dev server)
-shopify theme dev --store <store-handle>
-
-# Pull current live theme into local files
-shopify theme pull
-
-# Check theme for Shopify compatibility errors
-shopify theme check
+git add <files>
+git commit -m "description"
+git push
 ```
 
 ## Architecture

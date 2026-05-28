@@ -13,70 +13,70 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Questions? Comments? Let your customers get in touch with you by filling out the email form below.</p>",
-            "text_size": "typeset3"
+            "text": "<p>Get in touch with the Aspire Bathrooms team — we're here to help.</p>",
+            "text_size": "typeset2"
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text"
-      ],
+      "block_order": ["heading", "text"],
       "settings": {
         "image": "",
         "image_position": "center center",
         "text_box_position": "center",
         "text_alignment": "center",
-        "image_ratio": "450px",
+        "image_ratio": "350px",
         "full_width": true,
         "mobile_text_alignment": "center",
         "mobile_image_ratio": "250px",
         "stack_images_on_mobile": false,
         "show_text_below": false,
         "colors_text": "#ffffff",
-        "colors_overlay": "#000000",
-        "colors_overlay_opacity": 28,
+        "colors_overlay": "#0a0a0a",
+        "colors_overlay_opacity": 44,
         "padding_top": 0,
-        "padding_bottom": 36
+        "padding_bottom": 0
       }
     },
-    "main": {
-      "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "narrow": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "rich-text": {
+    "contact-intro": {
       "type": "rich-text",
       "blocks": {
-        "rich-text-0": {
+        "intro-heading": {
           "type": "heading",
           "settings": {
-            "heading": "Can we help?",
-            "heading_size": "h2"
+            "heading": "How Can We Help?",
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
           }
         },
-        "rich-text-1": {
+        "intro-text": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "text": "<p>Fill out the form below and a member of our team will get back to you as soon as possible. You can also download our <a href=\"/pages/downloads\">product brochure</a> or <a href=\"/pages/stockists\">find a stockist</a> near you.</p>",
             "text_size": "typeset",
-            "secondary_color": false
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
           }
         }
       },
-      "block_order": [
-        "rich-text-0",
-        "rich-text-1"
-      ],
+      "block_order": ["intro-heading", "intro-text"],
       "settings": {
         "text_alignment": "left",
+        "mobile_text_alignment": "left",
+        "horizontal_content": false,
         "narrow": true,
-        "padding_top": 36,
-        "padding_bottom": 0
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_text": "#0a0a0a",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "colors_highlight": "#ec6e00",
+        "padding_top": 48,
+        "padding_bottom": 0,
+        "enable_highlight": false,
+        "highlight_style": "marker"
       }
     },
     "form": {
@@ -88,126 +88,135 @@
         "padding_bottom": 36
       }
     },
-    "guarantees-0": {
+    "contact-trust": {
       "type": "guarantees",
       "blocks": {
-        "guarantees-0-0": {
+        "ctrust-1": {
           "type": "guarantee",
           "settings": {
-            "icon": "none",
-            "title": "Guarantee 1",
-            "text": "<p>Share information about your brand with your customers.</p>"
+            "icon": "phone",
+            "icon_size": "medium",
+            "custom_icon": "",
+            "title": "Call Us",
+            "title_size": "h4",
+            "text": "<p>Speak with our team directly</p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
           }
         },
-        "guarantees-0-1": {
+        "ctrust-2": {
           "type": "guarantee",
           "settings": {
-            "icon": "none",
-            "title": "Guarantee 2",
-            "text": "<p>Share information about your brand with your customers.</p>"
+            "icon": "email",
+            "icon_size": "medium",
+            "custom_icon": "",
+            "title": "Email Us",
+            "title_size": "h4",
+            "text": "<p>We respond within 1 business day</p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
           }
         },
-        "guarantees-0-2": {
+        "ctrust-3": {
           "type": "guarantee",
           "settings": {
-            "icon": "none",
-            "title": "Guarantee 3",
-            "text": "<p>Share information about your brand with your customers.</p>"
+            "icon": "map",
+            "icon_size": "medium",
+            "custom_icon": "",
+            "title": "Find a Stockist",
+            "title_size": "h4",
+            "text": "<p>Locate your nearest Aspire stockist</p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "ctrust-4": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "book",
+            "icon_size": "medium",
+            "custom_icon": "",
+            "title": "Product Brochure",
+            "title_size": "h4",
+            "text": "<p>Download our full product catalogue</p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
           }
         }
       },
-      "block_order": [
-        "guarantees-0-0",
-        "guarantees-0-1",
-        "guarantees-0-2"
-      ],
+      "block_order": ["ctrust-1", "ctrust-2", "ctrust-3", "ctrust-4"],
       "settings": {
-        "heading": "",
-        "heading_size": "h2",
         "layout": "default",
-        "column_alignment": "left",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "guarantees-1": {
-      "type": "guarantees",
-      "blocks": {
-        "guarantees-1-0": {
-          "type": "guarantee",
-          "settings": {
-            "icon": "none",
-            "title": "Guarantee 4",
-            "text": "<p>Share information about your brand with your customers.</p>"
-          }
-        },
-        "guarantees-1-1": {
-          "type": "guarantee",
-          "settings": {
-            "icon": "none",
-            "title": "Guarantee 5",
-            "text": "<p>Share information about your brand with your customers.</p>"
-          }
-        },
-        "guarantees-1-2": {
-          "type": "guarantee",
-          "settings": {
-            "icon": "none",
-            "title": "Guarantee 6",
-            "text": "<p>Share information about your brand with your customers.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "guarantees-1-0",
-        "guarantees-1-1",
-        "guarantees-1-2"
-      ],
-      "settings": {
+        "column_alignment": "center",
+        "horizontal_content": false,
+        "full_width": true,
+        "show_divider": true,
+        "columns_desktop": 4,
         "heading": "",
-        "heading_size": "h2",
-        "layout": "default",
-        "column_alignment": "left",
-        "padding_top": 0,
-        "padding_bottom": 36
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "use_custom_colors": true,
+        "colors_icon": "#ec6e00",
+        "colors_text": "#0a0a0a",
+        "colors_background": "#f7f4f0",
+        "gradient_background": "",
+        "colors_highlight": "#ec6e00",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "enable_highlight": false,
+        "highlight_style": "marker"
       }
     },
     "map": {
       "type": "map",
       "blocks": {
-        "map-0": {
+        "map-heading": {
           "type": "heading",
           "settings": {
-            "heading": "Our store",
-            "heading_size": "h2"
+            "heading": "Find Us",
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
           }
         },
-        "map-1": {
+        "map-address-label": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Address",
+            "subheading_size": "h5",
+            "secondary_color": true,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "map-address": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "text": "<p>Contact details to be updated — please use the form above or refer to your stockist.</p>",
             "text_size": "typeset",
-            "secondary_color": true
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
           }
         },
-        "map-2": {
+        "map-btn": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
+            "button_label": "Find a Stockist",
+            "button_link": "/pages/stockists",
+            "button_size": "small",
             "button_style_secondary": false
           }
         }
       },
-      "block_order": [
-        "map-0",
-        "map-1",
-        "map-2"
-      ],
+      "block_order": ["map-heading", "map-address-label", "map-address", "map-btn"],
       "settings": {
-        "map_address": "Toronto, Canada",
+        "map_address": "Australia",
         "map_api_key": "",
-        "map_zoom": 14,
+        "map_zoom": 12,
         "map_style": "standard",
         "image_position": "center center",
         "text_box_position": "middle-left",
@@ -218,21 +227,23 @@
         "mobile_text_box_position": "image_first",
         "mobile_text_alignment": "left",
         "mobile_image_ratio": "400px",
-        "colors_text": "#1a1b18",
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#ec6e00",
+        "colors_text": "#0a0a0a",
         "colors_overlay": "#ffffff",
+        "gradient_overlay": "",
         "colors_overlay_opacity": 100,
-        "padding_top": 36,
+        "colors_highlight": "#ec6e00",
+        "padding_top": 0,
         "padding_bottom": 0
       }
     }
   },
   "order": [
     "image-banner",
-    "main",
-    "rich-text",
+    "contact-intro",
     "form",
-    "guarantees-0",
-    "guarantees-1",
+    "contact-trust",
     "map"
   ]
 }

@@ -1,77 +1,160 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Find a Stockist",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>View Aspire Bathrooms products in person at a showroom near you.</p>",
+            "text_size": "typeset2"
+          }
+        }
+      },
+      "block_order": ["heading", "text"],
       "settings": {
-        "narrow": false,
-        "padding_top": 60,
+        "image": "",
+        "image_position": "center center",
+        "text_box_position": "center",
+        "text_alignment": "center",
+        "image_ratio": "350px",
+        "full_width": true,
+        "mobile_text_alignment": "center",
+        "mobile_image_ratio": "250px",
+        "stack_images_on_mobile": false,
+        "show_text_below": false,
+        "colors_text": "#ffffff",
+        "colors_overlay": "#0a0a0a",
+        "colors_overlay_opacity": 44,
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "store_locator_6Yt84i": {
+    "store-locator": {
       "type": "store-locator",
       "blocks": {
-        "location_PkVNU7": {
+        "location-1": {
           "type": "location",
           "settings": {
-            "title": "Massachusetts",
-            "address": "Fenway Park, Boston, US",
-            "button_label": "Fresh Picks!",
+            "title": "Stockist Location 1",
+            "address": "Australia",
+            "button_label": "Get Directions",
             "button_link": ""
           }
         },
-        "location_TXxrbJ": {
+        "location-2": {
           "type": "location",
           "settings": {
-            "title": "Connecticut",
-            "address": "Mystic Seaport, US",
-            "button_label": "",
+            "title": "Stockist Location 2",
+            "address": "Australia",
+            "button_label": "Get Directions",
             "button_link": ""
           }
         },
-        "location_znKQHk": {
+        "location-3": {
           "type": "location",
           "settings": {
-            "title": "Rhode Island",
-            "address": "The Breakers, Newport, US",
-            "button_label": "Contact us",
-            "button_link": ""
-          }
-        },
-        "location_EwBxeb": {
-          "type": "location",
-          "settings": {
-            "title": "New York",
-            "address": "Statue of Liberty, New York City, US",
-            "button_label": "",
+            "title": "Stockist Location 3",
+            "address": "Australia",
+            "button_label": "Get Directions",
             "button_link": ""
           }
         }
       },
-      "block_order": [
-        "location_PkVNU7",
-        "location_TXxrbJ",
-        "location_znKQHk",
-        "location_EwBxeb"
-      ],
+      "block_order": ["location-1", "location-2", "location-3"],
       "settings": {
         "map_api_key": "",
-        "map_zoom": 7,
+        "map_zoom": 12,
         "image_ratio": "650px",
-        "full_width": false,
+        "full_width": true,
         "show_divider": false,
         "mobile_image_ratio": "100vh",
-        "colors_overlay": "#ffeec4",
-        "colors_text": "#212121",
-        "colors_button_label": "#212326",
-        "colors_border": "#e0e0e0",
+        "colors_overlay": "#f7f4f0",
+        "colors_text": "#0a0a0a",
+        "colors_button_label": "#ffffff",
+        "colors_border": "#e0dbd5",
         "padding_top": 0,
-        "padding_bottom": 36
+        "padding_bottom": 0
+      }
+    },
+    "stockist-cta": {
+      "type": "rich-text",
+      "blocks": {
+        "cta-heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Want to become a stockist?",
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "cta-text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you're a bathroom showroom, plumbing supplier, or retailer interested in stocking Aspire Bathrooms products, we'd love to hear from you.</p>",
+            "text_size": "typeset",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "cta-button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get in Touch",
+            "button_link": "/pages/contact-us",
+            "button_size": "medium",
+            "button_style_secondary": false,
+            "button_alt_label": "Download Brochure",
+            "button_alt_link": "/pages/downloads",
+            "button_alt_size": "medium",
+            "button_alt_style_secondary": true
+          }
+        }
+      },
+      "block_order": ["cta-heading", "cta-text", "cta-button"],
+      "settings": {
+        "text_alignment": "center",
+        "mobile_text_alignment": "center",
+        "horizontal_content": false,
+        "narrow": true,
+        "show_divider": true,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#ec6e00",
+        "colors_text": "#0a0a0a",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#ec6e00",
+        "gradient_background": "",
+        "padding_top": 60,
+        "padding_bottom": 72,
+        "enable_highlight": false,
+        "highlight_style": "marker"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "narrow": false,
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
-    "main",
-    "store_locator_6Yt84i"
+    "banner",
+    "store-locator",
+    "stockist-cta",
+    "main"
   ]
 }

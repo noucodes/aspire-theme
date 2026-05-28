@@ -1,0 +1,305 @@
+{
+  "sections": {
+    "image-banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Downloads & Resources",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Product catalogues and technical resources for Aspire Bathrooms.</p>",
+            "text_size": "typeset2"
+          }
+        }
+      },
+      "block_order": ["heading", "text"],
+      "settings": {
+        "image": "",
+        "image_position": "center center",
+        "text_box_position": "center",
+        "text_alignment": "center",
+        "image_ratio": "350px",
+        "full_width": true,
+        "mobile_text_alignment": "center",
+        "mobile_image_ratio": "250px",
+        "stack_images_on_mobile": false,
+        "show_text_below": false,
+        "colors_text": "#ffffff",
+        "colors_overlay": "#0a0a0a",
+        "colors_overlay_opacity": 44,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "downloads-intro": {
+      "type": "rich-text",
+      "blocks": {
+        "intro-heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Product Catalogue",
+            "heading_size": "h2",
+            "heading_tag": "h1",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "intro-text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Download our full product catalogue to browse our complete range of bathroom, kitchen, and laundry fixtures. The catalogue includes all products, specifications, dimensions, and available finishes.</p>",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": ["intro-heading", "intro-text"],
+      "settings": {
+        "text_alignment": "center",
+        "mobile_text_alignment": "center",
+        "horizontal_content": false,
+        "narrow": true,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_text": "#0a0a0a",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "colors_highlight": "#ec6e00",
+        "padding_top": 60,
+        "padding_bottom": 36,
+        "enable_highlight": false,
+        "highlight_style": "marker"
+      }
+    },
+    "brochure-download": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "PDF Download",
+            "subheading_size": "h5",
+            "secondary_color": true,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Aspire Bathrooms Full Product Catalogue",
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our complete product catalogue features our full range of tapware, vanities, basins, baths, shower systems, toilets, accessories, and more. Use it to plan your renovation, share with your tradesperson, or explore all available options.</p><ul><li>Full product range with SKU codes</li><li>Technical specifications and dimensions</li><li>Available finishes for each product</li><li>Installation notes and requirements</li></ul>",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Download Catalogue (PDF)",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": ["subheading", "heading", "text", "button"],
+      "settings": {
+        "image": "",
+        "image_position": "center center",
+        "layout": "image_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "500px",
+        "full_width": false,
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#ec6e00",
+        "colors_text": "#0a0a0a",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#ec6e00",
+        "padding_top": 0,
+        "padding_bottom": 60,
+        "enable_highlight": false,
+        "highlight_style": "marker"
+      }
+    },
+    "downloads-trust": {
+      "type": "guarantees",
+      "blocks": {
+        "dtrust-1": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "book",
+            "icon_size": "medium",
+            "custom_icon": "",
+            "title": "Full Product Range",
+            "title_size": "h4",
+            "text": "<p>Every product we stock, in one downloadable PDF</p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "dtrust-2": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "ruler",
+            "icon_size": "medium",
+            "custom_icon": "",
+            "title": "Dimensions Included",
+            "title_size": "h4",
+            "text": "<p>Technical specs and dimensions for every product</p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "dtrust-3": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "star",
+            "icon_size": "medium",
+            "custom_icon": "",
+            "title": "All Finishes Listed",
+            "title_size": "h4",
+            "text": "<p>See all available finishes for each product</p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "dtrust-4": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "chat",
+            "icon_size": "medium",
+            "custom_icon": "",
+            "title": "Need Help?",
+            "title_size": "h4",
+            "text": "<p>Contact our team for product advice and recommendations</p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": ["dtrust-1", "dtrust-2", "dtrust-3", "dtrust-4"],
+      "settings": {
+        "layout": "default",
+        "column_alignment": "center",
+        "horizontal_content": false,
+        "full_width": true,
+        "show_divider": true,
+        "columns_desktop": 4,
+        "heading": "",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "use_custom_colors": true,
+        "colors_icon": "#ec6e00",
+        "colors_text": "#0a0a0a",
+        "colors_background": "#f7f4f0",
+        "gradient_background": "",
+        "colors_highlight": "#ec6e00",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "enable_highlight": false,
+        "highlight_style": "marker"
+      }
+    },
+    "downloads-cta": {
+      "type": "rich-text",
+      "blocks": {
+        "cta-heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Looking for Something Specific?",
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "cta-text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you need individual product data sheets, installation guides, or have a trade enquiry, get in touch with our team and we'll send through what you need.</p>",
+            "text_size": "typeset",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "cta-buttons": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact Us",
+            "button_link": "/pages/contact-us",
+            "button_size": "medium",
+            "button_style_secondary": false,
+            "button_alt_label": "Find a Stockist",
+            "button_alt_link": "/pages/stockists",
+            "button_alt_size": "medium",
+            "button_alt_style_secondary": true
+          }
+        }
+      },
+      "block_order": ["cta-heading", "cta-text", "cta-buttons"],
+      "settings": {
+        "text_alignment": "center",
+        "mobile_text_alignment": "center",
+        "horizontal_content": false,
+        "narrow": true,
+        "show_divider": true,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#ec6e00",
+        "colors_text": "#0a0a0a",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#ec6e00",
+        "gradient_background": "",
+        "padding_top": 60,
+        "padding_bottom": 72,
+        "enable_highlight": false,
+        "highlight_style": "marker"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "narrow": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "image-banner",
+    "downloads-intro",
+    "brochure-download",
+    "downloads-trust",
+    "downloads-cta",
+    "main"
+  ]
+}

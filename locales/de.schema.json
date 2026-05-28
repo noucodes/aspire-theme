@@ -3913,6 +3913,21 @@
         "map_zoom": {
           "label": "Karten zoomen"
         },
+        "map_language": {
+          "label": "Kartensprache",
+          "info": "Sprache fuer Kartenbeschriftungen, Wegbeschreibungen und Steuerelemente. 'Automatisch' verwendet die aktuelle Sprache des Shops.",
+          "options__auto": {
+            "label": "Automatisch (Shop-Sprache)"
+          },
+          "options__browser": {
+            "label": "Browser-Standard"
+          }
+        },
+        "map_region": {
+          "label": "Kartenregion",
+          "info": "Optional. Region für Geocoding-Bias (z. B. DE, US, JP). Beeinflusst Suchergebnisse und Kartenverhalten.",
+          "placeholder": "z. B. DE"
+        },
         "mobile_text_box_position": {
           "label": "Mobiles Layout",
           "options__1": {
