@@ -14,12 +14,25 @@
     <a href="{{ routes.root_url }}" class="link" title="{{ 'general.breadcrumbs.home_link_title' | t }}">{{ 'general.breadcrumbs.home' | t }}</a>
 
     {%- if template.name == 'product' -%}
-      {%- if collection and collection.handle %}
+      {%- liquid
+        assign breadcrumb_collection = nil
+        if collection and collection.handle != 'all'
+          assign breadcrumb_collection = collection
+        else
+          for c in product.collections
+            if c.handle != 'all'
+              assign breadcrumb_collection = c
+              break
+            endif
+          endfor
+        endif
+      -%}
+      {%- if breadcrumb_collection -%}
         <span class="breadcrumb__divider" aria-hidden="true">/</span>
-        {% capture url %}{{ routes.collections_url }}/{{ collection.handle }}{% endcapture %}
-        {{ collection.title | link_to: url, class: "link" }}
-      {%- endif %}
-      
+        {% capture url %}{{ routes.collections_url }}/{{ breadcrumb_collection.handle }}{% endcapture %}
+        {{ breadcrumb_collection.title | link_to: url, class: "link" }}
+      {%- endif -%}
+
       <span class="breadcrumb__divider" aria-hidden="true">/</span>
 
     {%- elsif template.name == 'collection' and collection.handle %}
@@ -100,17 +113,17 @@
           "item": "{{ shop.url }}"
         }
         {%- if template.name == 'product' -%}
-          {%- if collection and collection.handle -%}
+          {%- if breadcrumb_collection -%}
           , {
             "@type": "ListItem",
             "position": 2,
-            "name": "{{ collection.title }}",
-            "item": "{{ shop.url }}/collections/{{ collection.handle }}"
+            "name": "{{ breadcrumb_collection.title }}",
+            "item": "{{ shop.url }}/collections/{{ breadcrumb_collection.handle }}"
           }
-          {% endif %}
+          {%- endif -%}
           , {
             "@type": "ListItem",
-            "position": {% if collection and collection.handle %}3{% else %}2{% endif %},
+            "position": {% if breadcrumb_collection %}3{% else %}2{% endif %},
             "name": "{{ product.title }}",
             "item": "{{ shop.url }}/products/{{ product.handle }}"
           }
