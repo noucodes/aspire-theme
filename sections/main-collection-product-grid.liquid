@@ -12,6 +12,9 @@
   assign filter_max_items = section.settings.filtering_max_items
   assign color_swatches_add_label = section.settings.filtering_color_swatches_add_label
 
+  if collection.all_products_count > 5000
+    assign enable_filtering = false
+  endif
 
   assign blocks_count = section.blocks.size
 -%}
