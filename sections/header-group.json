@@ -143,7 +143,7 @@
         "mega-laundry"
       ],
       "settings": {
-        "logo": "{{ shop.brand.logo }}",
+        "logo": "shopify://shop_images/Aspire_PNG_Trans_Orange_thumb_704905af-00b2-440c-9afc-37e8f54732ba.png",
         "logo_height": 50,
         "mobile_logo_height": 40,
         "logo_position": "top-left",
