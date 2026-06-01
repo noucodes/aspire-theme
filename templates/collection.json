@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banner": {
@@ -20,7 +29,7 @@
     "subs": {
       "type": "main-collection-subs",
       "settings": {
-        "menu": "sub-collections",
+        "menu": "main-menu-aspire",
         "per_row": 5,
         "columns_mobile": "2",
         "horizontal_on_mobile": true,
@@ -117,7 +126,12 @@
           }
         }
       },
-      "block_order": ["ctrust-1", "ctrust-2", "ctrust-3", "ctrust-4"],
+      "block_order": [
+        "ctrust-1",
+        "ctrust-2",
+        "ctrust-3",
+        "ctrust-4"
+      ],
       "settings": {
         "layout": "default",
         "column_alignment": "center",
