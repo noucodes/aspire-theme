@@ -364,7 +364,7 @@
 
 .card__media .media > img,
 .card__media .media > picture img {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .card__media-full-spacer {
