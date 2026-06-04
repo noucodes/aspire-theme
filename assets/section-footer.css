@@ -43,6 +43,17 @@
   }
 }
 
+.footer__logo-wrapper {
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 0;
+}
+
+.footer__logo-wrapper img {
+  height: auto;
+  display: inline-block;
+}
+
 .footer__content-top {
   display: block;
   padding-top: 2rem;
