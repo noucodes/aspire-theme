@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banner": {
@@ -7,32 +16,46 @@
           "type": "heading",
           "settings": {
             "heading": "Find a Stockist",
-            "heading_size": "h0"
+            "heading_size": "h0",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
           }
         },
         "text": {
           "type": "text",
           "settings": {
             "text": "<p>View Aspire Bathrooms products in person at a showroom near you.</p>",
-            "text_size": "typeset2"
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
           }
         }
       },
-      "block_order": ["heading", "text"],
+      "block_order": [
+        "heading",
+        "text"
+      ],
       "settings": {
-        "image": "",
         "image_position": "center center",
         "text_box_position": "center",
         "text_alignment": "center",
         "image_ratio": "350px",
+        "show_text_box": false,
         "full_width": true,
+        "show_divider": false,
+        "image_behavior": "none",
         "mobile_text_alignment": "center",
         "mobile_image_ratio": "250px",
         "stack_images_on_mobile": false,
         "show_text_below": false,
+        "colors_button_label": "#1a1b18",
+        "colors_button_background": "#ffffff",
         "colors_text": "#ffffff",
         "colors_overlay": "#0a0a0a",
         "colors_overlay_opacity": 44,
+        "colors_highlight": "#ffb503",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -68,10 +91,16 @@
           }
         }
       },
-      "block_order": ["location-1", "location-2", "location-3"],
+      "block_order": [
+        "location-1",
+        "location-2",
+        "location-3"
+      ],
       "settings": {
         "map_api_key": "",
         "map_zoom": 12,
+        "map_language": "auto",
+        "map_region": "",
         "image_ratio": "650px",
         "full_width": true,
         "show_divider": false,
@@ -110,18 +139,21 @@
         "cta-button": {
           "type": "button",
           "settings": {
+            "button_size": "medium",
             "button_label": "Get in Touch",
             "button_link": "/pages/contact-us",
-            "button_size": "medium",
             "button_style_secondary": false,
             "button_alt_label": "Download Brochure",
             "button_alt_link": "/pages/downloads",
-            "button_alt_size": "medium",
             "button_alt_style_secondary": true
           }
         }
       },
-      "block_order": ["cta-heading", "cta-text", "cta-button"],
+      "block_order": [
+        "cta-heading",
+        "cta-text",
+        "cta-button"
+      ],
       "settings": {
         "text_alignment": "center",
         "mobile_text_alignment": "center",
@@ -136,9 +168,7 @@
         "colors_highlight": "#ec6e00",
         "gradient_background": "",
         "padding_top": 60,
-        "padding_bottom": 72,
-        "enable_highlight": false,
-        "highlight_style": "marker"
+        "padding_bottom": 72
       }
     },
     "main": {
