@@ -12,6 +12,85 @@
 
 {{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
 
+<style>
+  .collection-hero__description--truncated {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .collection-hero__see-more {
+    display: none;
+    background: none;
+    border: none;
+    padding: 0.4rem 0 0;
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: currentColor;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .collection-hero__see-more.is-visible {
+    display: inline-block;
+  }
+  .collection-desc-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+  .collection-desc-modal[hidden] {
+    display: none;
+  }
+  .collection-desc-modal__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(var(--color-foreground), 0.5);
+    cursor: pointer;
+  }
+  .collection-desc-modal__panel {
+    position: relative;
+    background: rgb(var(--color-background));
+    color: rgb(var(--color-foreground));
+    border-radius: var(--popup-corner-radius, 4px);
+    padding: 3rem 3rem 2.5rem;
+    max-width: 64rem;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    z-index: 1;
+    box-shadow: var(--shadow-popover, 0 8px 32px rgba(0,0,0,0.15));
+  }
+  .collection-desc-modal__close {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.6rem;
+    color: rgb(var(--color-foreground));
+    line-height: 0;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+  }
+  .collection-desc-modal__close:hover {
+    opacity: 1;
+  }
+  .collection-desc-modal__title {
+    margin: 0 3rem 1.5rem 0;
+    font-size: 2.4rem;
+  }
+  .collection-desc-modal__description {
+    font-size: 1.6rem;
+    line-height: calc(1 + 0.5 / var(--font-body-scale));
+    color: rgba(var(--color-foreground), 0.85);
+  }
+</style>
+
 <div class="collection-hero{% if section.settings.show_image and collection.image != blank %} collection-hero--with-image{% if section.settings.apply_overlay %} collection-hero--contrast{% endif %}{% endif %}{% if section.settings.show_text_below %} collection-hero--mobile-bottom{% endif %} section--padding">
   <div class="collection-hero__inner">
     {%- if section.settings.show_image and collection.image != blank -%}
@@ -36,12 +115,88 @@
         </h1>
 
         {%- if section.settings.show_description -%}
-          <div class="collection-hero__description rte">{{ collection.description }}</div>
+          <div
+            class="collection-hero__description rte collection-hero__description--truncated"
+            id="collection-desc-{{ section.id }}"
+          >{{ collection.description }}</div>
+          <button
+            id="collection-see-more-{{ section.id }}"
+            class="collection-hero__see-more"
+            aria-haspopup="dialog"
+            aria-controls="collection-modal-{{ section.id }}"
+          >See more</button>
         {%- endif -%}
       </div>
     </div>
   </div>
 </div>
+
+{%- if section.settings.show_description -%}
+  <div
+    id="collection-modal-{{ section.id }}"
+    class="collection-desc-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="collection-modal-title-{{ section.id }}"
+    hidden
+  >
+    <div class="collection-desc-modal__overlay" data-modal-close></div>
+    <div class="collection-desc-modal__panel">
+      <button
+        class="collection-desc-modal__close"
+        data-modal-close
+        aria-label="{{ 'accessibility.close' | t }}"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" focusable="false">
+          <path d="M1 1l16 16M17 1L1 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <h2 class="collection-desc-modal__title" id="collection-modal-title-{{ section.id }}">{{ collection.title | escape }}</h2>
+      <div class="collection-desc-modal__description rte">{{ collection.description }}</div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var descEl  = document.getElementById('collection-desc-{{ section.id }}');
+      var btnEl   = document.getElementById('collection-see-more-{{ section.id }}');
+      var modalEl = document.getElementById('collection-modal-{{ section.id }}');
+      if (!descEl || !btnEl || !modalEl) return;
+
+      function updateButton() {
+        if (descEl.scrollHeight > descEl.clientHeight + 2) {
+          btnEl.classList.add('is-visible');
+        } else {
+          btnEl.classList.remove('is-visible');
+        }
+      }
+      updateButton();
+      window.addEventListener('resize', updateButton);
+
+      function openModal() {
+        modalEl.hidden = false;
+        document.body.style.overflow = 'hidden';
+        modalEl.querySelector('.collection-desc-modal__close').focus();
+      }
+
+      function closeModal() {
+        modalEl.hidden = true;
+        document.body.style.overflow = '';
+        btnEl.focus();
+      }
+
+      btnEl.addEventListener('click', openModal);
+
+      modalEl.addEventListener('click', function (e) {
+        if (e.target.closest('[data-modal-close]') || !e.target.closest('.collection-desc-modal__panel')) closeModal();
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !modalEl.hidden) closeModal();
+      });
+    })();
+  </script>
+{%- endif -%}
 
 {% schema %}
 {
