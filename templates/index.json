@@ -312,7 +312,7 @@
         "product_rTft8n": {
           "type": "product",
           "settings": {
-            "product": "aspire-la-rosa-1-3-4-bowl-s-steel-sink",
+            "product": "aspire-within-300mm-towel-holder-matte-black",
             "color": "#000000",
             "horizontal": 9,
             "vertical": 78
@@ -321,7 +321,7 @@
         "product_kTBdM6": {
           "type": "product",
           "settings": {
-            "product": "",
+            "product": "aspire-midnight-soap-shelf-matte-black",
             "color": "#000000",
             "horizontal": 70,
             "vertical": 45
@@ -330,7 +330,7 @@
         "product_ViD3GD": {
           "type": "product",
           "settings": {
-            "product": "",
+            "product": "aspire-midnight-wall-mixer-w-t-spout-matte-black",
             "color": "#000000",
             "horizontal": 45,
             "vertical": 65
@@ -344,7 +344,7 @@
       ],
       "name": "t:sections.shop-the-look.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Aspire_Within_750Mm_Single_Towel_Rail_Matte_Black_1.png",
+        "image": "shopify://shop_images/Gemini_Generated_Image_9m5gzm9m5gzm9m5g.png",
         "layout": "image_first",
         "text_box_position": "top",
         "text_alignment": "left",
@@ -603,6 +603,7 @@
       ],
       "name": "t:sections.images-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/The_Ultimate_Guide_to_Styling_Aspire_Matte_Black_in_Your_Bathroom.png",
         "image_ratio": "portrait",
         "image_position": "center center",
         "layout": "image_first",
