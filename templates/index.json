@@ -604,6 +604,9 @@
       "name": "t:sections.images-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/The_Ultimate_Guide_to_Styling_Aspire_Matte_Black_in_Your_Bathroom.png",
+        "image_2": "shopify://shop_images/Gemini_Generated_Image_9m5gzm9m5gzm9m5g.png",
+        "image_3": "shopify://shop_images/Aspire_Urban_II_Wf_Inwall_Suite_Round_CP_Button_Cistern_Seat_Pan_4.png",
+        "image_4": "shopify://shop_images/Aspire_Unity_Square_Hi_Rise_Vessel_Mixer_Chrome_1.png",
         "image_ratio": "portrait",
         "image_position": "center center",
         "layout": "image_first",
