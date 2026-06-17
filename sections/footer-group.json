@@ -18,14 +18,18 @@
           "type": "link_list",
           "settings": {
             "heading": "Quick Links",
-            "menu": "footer-info"
+            "menu": "footer",
+            "enable_highlight": false,
+            "highlight_style": "marker"
           }
         },
         "footer-categories": {
           "type": "link_list",
           "settings": {
             "heading": "Categories",
-            "menu": "footer-bathroom"
+            "menu": "main-menu-aspire",
+            "enable_highlight": false,
+            "highlight_style": "marker"
           }
         }
       },
@@ -35,9 +39,12 @@
       ],
       "settings": {
         "show_divider": true,
+        "footer_logo_width": 150,
         "newsletter_enable": true,
         "newsletter_heading": "Stay in the Loop",
         "newsletter_text": "<p>Get the latest products, promotions, and renovation inspiration.</p>",
+        "return_url": "",
+        "enable_follow_on_shop": true,
         "show_social": true,
         "social_heading": "",
         "enable_country_selector": false,
@@ -50,7 +57,10 @@
         "colors_link": "#e0dbd5",
         "colors_border": "#5c5c5c",
         "colors_background": "#4c4c4c",
-        "gradient_background": ""
+        "gradient_background": "",
+        "colors_highlight": "#ffb503",
+        "enable_highlight": false,
+        "highlight_style": "marker"
       }
     }
   },

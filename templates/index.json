@@ -12,6 +12,31 @@
     "hero-slideshow": {
       "type": "slideshow",
       "blocks": {
+        "slide-4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/watermarked_img_13368948746750230606.jpg",
+            "image_position": "center center",
+            "text_box_position": "bottom-right",
+            "subheading": "Accessibility Solutions",
+            "subheading_size": "h5",
+            "heading": "Designed for <em>Everyone</em>",
+            "heading_size": "h0",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "typeset",
+            "button_label": "Assisted Living Range",
+            "button_link": "/collections/assisted-living",
+            "button_size": "medium",
+            "button_style_secondary": false,
+            "button_alt_label": "",
+            "button_alt_link": "",
+            "button_alt_size": "medium",
+            "button_alt_style_secondary": true,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
         "slide-1": {
           "type": "image",
           "settings": {
@@ -86,38 +111,13 @@
             "enable_highlight": false,
             "highlight_style": "marker"
           }
-        },
-        "slide-4": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Aspire_Midnight_3-Piece_Basin_Set_Matte_Black_1.png",
-            "image_position": "center center",
-            "text_box_position": "bottom-right",
-            "subheading": "Accessibility Solutions",
-            "subheading_size": "h5",
-            "heading": "Designed for <em>Everyone</em>",
-            "heading_size": "h0",
-            "heading_tag": "h2",
-            "text": "",
-            "text_size": "typeset",
-            "button_label": "Assisted Living Range",
-            "button_link": "/collections/assisted-living",
-            "button_size": "medium",
-            "button_style_secondary": false,
-            "button_alt_label": "",
-            "button_alt_link": "",
-            "button_alt_size": "medium",
-            "button_alt_style_secondary": true,
-            "enable_highlight": false,
-            "highlight_style": "marker"
-          }
         }
       },
       "block_order": [
+        "slide-4",
         "slide-1",
         "slide-2",
-        "slide-3",
-        "slide-4"
+        "slide-3"
       ],
       "settings": {
         "slideshow_type": "legacy",
@@ -873,6 +873,7 @@
         "logo-5",
         "logo-6"
       ],
+      "disabled": true,
       "settings": {
         "direction": "left",
         "speed": 1.2,
@@ -911,6 +912,7 @@
         "newsletter-heading",
         "newsletter-subtext"
       ],
+      "disabled": true,
       "settings": {
         "return_url": "",
         "text_alignment": "left",
@@ -979,6 +981,7 @@
         "cta-button"
       ],
       "settings": {
+        "image": "shopify://shop_images/watermarked_img_13368948746750230606.jpg",
         "image_position": "center center",
         "text_box_position": "middle-center",
         "text_alignment": "center",
