@@ -41,7 +41,7 @@
         "image_position": "center center",
         "text_box_position": "center",
         "text_alignment": "center",
-        "image_ratio": "350px",
+        "image_ratio": "400px",
         "show_text_box": false,
         "full_width": true,
         "show_divider": false,

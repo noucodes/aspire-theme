@@ -155,8 +155,8 @@
     }
 	}
 
-	function startGeocoding(addresses) {
-			const geocoder = new google.maps.Geocoder();
+	function startGeocoding(addresses, GeocoderClass) {
+			const geocoder = new GeocoderClass();
 			geocodeAddressWithDelay(geocoder, addresses);
 	}
 
@@ -167,10 +167,21 @@
 	}
 
 	async function initializeGeocoder() {
-		await waitForConditionAsync(() => window.google && window.google.maps.Geocoder);
-		startGeocoding(locator_addresses);
+		{%- if section.settings.map_api_key == blank -%}
+		return;
+		{%- endif -%}
+		await waitForConditionAsync(() => window.google && window.google.maps);
+		let GeocoderClass;
+		if (window.google.maps.importLibrary) {
+			const lib = await window.google.maps.importLibrary('geocoding');
+			GeocoderClass = lib.Geocoder;
+		} else {
+			await waitForConditionAsync(() => window.google.maps.Geocoder);
+			GeocoderClass = window.google.maps.Geocoder;
+		}
+		startGeocoding(locator_addresses, GeocoderClass);
 	}
-	initializeGeocoder();	
+	initializeGeocoder();
 </script>
 
 {% schema %}
