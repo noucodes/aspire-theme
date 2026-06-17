@@ -231,7 +231,7 @@
         "room-2": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/zac-gudakov-upiqQpeUCYU-unsplash.jpg",
+            "image": "shopify://shop_images/sven-brandsma-3hEGHI4b4gg-unsplash.jpg",
             "image_position": "center center",
             "heading": "Kitchen",
             "description": "<p>Premium sinks and tapware to complete your kitchen renovation.</p>",
@@ -246,6 +246,7 @@
         "room-3": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/zac-gudakov-upiqQpeUCYU-unsplash.jpg",
             "image_position": "center center",
             "heading": "Laundry",
             "description": "<p>Inset troughs, cabinets and tapware for your laundry space.</p>",
