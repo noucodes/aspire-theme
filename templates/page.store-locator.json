@@ -66,10 +66,10 @@
         "location-1": {
           "type": "location",
           "settings": {
-            "title": "Stockist Location 1",
-            "address": "Australia",
+            "title": "Burdens Bathrooms Glen Waverley",
+            "address": "350 Springvale Rd, Glen Waverley VIC 3150, Australia",
             "button_label": "Get Directions",
-            "button_link": ""
+            "button_link": "https://www.google.com/maps?sca_esv=f7ed08c59bb0b0af&rlz=1C1GCEA_enPH1085PH1085&output=search&q=Burdens+Bathrooms+Glen+Waverley&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKp9lEhFAN_4ain3HSNQWw-mOdEry7qMdvK9DVYTQhhmGPzdLibceP-axzNRyypn83aa9v77RK3nAyJbS7Ww3c5hEZ41MHuBwA1cj9fLdcvZl39JyX99GA6dTRuy8597fUa5gVhW6ji9TQaHsuXH4CUtx2nUSCgjR6EycjMi9JpkD60fmHj94qqvvZFpMtWVwcBzf9XLw&entry=mc&ved=1t:200715&ictx=111"
           }
         },
         "location-2": {
