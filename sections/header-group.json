@@ -27,6 +27,7 @@
         },
         "announce-2": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Download our full product brochure — all products in one PDF",
             "text_on_mobile": "Download our product brochure",
