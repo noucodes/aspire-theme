@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image-banner": {
@@ -7,32 +16,46 @@
           "type": "heading",
           "settings": {
             "heading": "Contact Us",
-            "heading_size": "h0"
+            "heading_size": "h0",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
           }
         },
         "text": {
           "type": "text",
           "settings": {
             "text": "<p>Get in touch with the Aspire Bathrooms team — we're here to help.</p>",
-            "text_size": "typeset2"
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
           }
         }
       },
-      "block_order": ["heading", "text"],
+      "block_order": [
+        "heading",
+        "text"
+      ],
       "settings": {
-        "image": "",
         "image_position": "center center",
         "text_box_position": "center",
         "text_alignment": "center",
         "image_ratio": "350px",
+        "show_text_box": false,
         "full_width": true,
+        "show_divider": false,
+        "image_behavior": "none",
         "mobile_text_alignment": "center",
         "mobile_image_ratio": "250px",
         "stack_images_on_mobile": false,
         "show_text_below": false,
+        "colors_button_label": "#1a1b18",
+        "colors_button_background": "#ffffff",
         "colors_text": "#ffffff",
         "colors_overlay": "#0a0a0a",
         "colors_overlay_opacity": 44,
+        "colors_highlight": "#ffb503",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -61,7 +84,10 @@
           }
         }
       },
-      "block_order": ["intro-heading", "intro-text"],
+      "block_order": [
+        "intro-heading",
+        "intro-text"
+      ],
       "settings": {
         "text_alignment": "left",
         "mobile_text_alignment": "left",
@@ -69,21 +95,25 @@
         "narrow": true,
         "show_divider": false,
         "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
         "colors_text": "#0a0a0a",
         "colors_background": "#ffffff",
-        "gradient_background": "",
         "colors_highlight": "#ec6e00",
+        "gradient_background": "",
         "padding_top": 48,
-        "padding_bottom": 0,
-        "enable_highlight": false,
-        "highlight_style": "marker"
+        "padding_bottom": 0
       }
     },
     "form": {
       "type": "contact-form",
       "settings": {
-        "heading": "",
+        "return_url": "",
         "show_phone": true,
+        "show_divider": false,
+        "heading": "",
+        "heading_size": "h2",
+        "heading_tag": "h2",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -144,7 +174,12 @@
           }
         }
       },
-      "block_order": ["ctrust-1", "ctrust-2", "ctrust-3", "ctrust-4"],
+      "block_order": [
+        "ctrust-1",
+        "ctrust-2",
+        "ctrust-3",
+        "ctrust-4"
+      ],
       "settings": {
         "layout": "default",
         "column_alignment": "center",
@@ -212,10 +247,15 @@
           }
         }
       },
-      "block_order": ["map-heading", "map-address-label", "map-address", "map-btn"],
+      "block_order": [
+        "map-heading",
+        "map-address-label",
+        "map-address",
+        "map-btn"
+      ],
       "settings": {
         "map_address": "Australia",
-        "map_api_key": "",
+        "map_api_key": "AIzaSyDvWXClZpKD8So6MnWhDxyEBfiDLVwjg8s",
         "map_zoom": 12,
         "map_style": "standard",
         "image_position": "center center",
