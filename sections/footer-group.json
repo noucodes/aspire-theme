@@ -14,11 +14,21 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "footer-quick-links": {
+        "link_list_TN3ReN": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick Links",
+            "heading": "Quick links",
             "menu": "footer",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "footer-quick-links": {
+          "type": "link_list",
+          "disabled": true,
+          "settings": {
+            "heading": "Quick Links",
+            "menu": "",
             "enable_highlight": false,
             "highlight_style": "marker"
           }
@@ -34,6 +44,7 @@
         }
       },
       "block_order": [
+        "link_list_TN3ReN",
         "footer-quick-links",
         "footer-categories"
       ],
