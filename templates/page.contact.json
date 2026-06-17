@@ -76,17 +76,9 @@
         "contact-0": {
           "type": "contact",
           "settings": {
-            "heading": "Information",
-            "text": "info@yourstore.com",
-            "link": "mailto:info@yourstore.com"
-          }
-        },
-        "contact-1": {
-          "type": "contact",
-          "settings": {
-            "heading": "Customer service",
-            "text": "shop@yourstore.com",
-            "link": "mailto:shop@yourstore.com"
+            "heading": "Email Us",
+            "text": "hello@aspirebathrooms.com.au",
+            "link": "mailto:hello@aspirebathrooms.com.au"
           }
         },
         "media": {
@@ -98,11 +90,10 @@
       },
       "block_order": [
         "contact-0",
-        "contact-1",
         "media"
       ],
       "settings": {
-        "return_url": "",
+        "return_url": "mailto:hello@aspirebathrooms.com.au",
         "show_phone": true,
         "show_divider": false,
         "heading": "Get in touch",
