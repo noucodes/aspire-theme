@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image-banner": {
@@ -8,7 +17,9 @@
           "settings": {
             "heading": "Contact Us",
             "heading_size": "h0",
-            "heading_tag": "h2"
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
           }
         },
         "text": {
@@ -16,7 +27,9 @@
           "settings": {
             "text": "<p>Questions? Comments? Let your customers get in touch with you by filling out the email form below.</p>",
             "text_size": "typeset3",
-            "secondary_color": false
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
           }
         }
       },
@@ -25,7 +38,7 @@
         "text"
       ],
       "settings": {
-        "image": "",
+        "image": "shopify://shop_images/Aspire_Unity_II_1500_DBowl_WHung_Vanity_White_1_Tap_Hole_4.png",
         "image_position": "top center",
         "text_box_position": "bottom-right",
         "text_alignment": "left",
@@ -33,6 +46,7 @@
         "show_text_box": false,
         "full_width": true,
         "show_divider": false,
+        "image_behavior": "none",
         "mobile_text_alignment": "left",
         "mobile_image_ratio": "250px",
         "stack_images_on_mobile": true,
@@ -42,6 +56,7 @@
         "colors_text": "#ffffff",
         "colors_overlay": "#000000",
         "colors_overlay_opacity": 28,
+        "colors_highlight": "#ffb503",
         "padding_top": 0,
         "padding_bottom": 36
       }
@@ -61,33 +76,9 @@
         "contact-0": {
           "type": "contact",
           "settings": {
-            "heading": "Information",
-            "text": "info@yourstore.com",
-            "link": "mailto:info@yourstore.com"
-          }
-        },
-        "contact-1": {
-          "type": "contact",
-          "settings": {
-            "heading": "Customer service",
-            "text": "shop@yourstore.com",
-            "link": "mailto:shop@yourstore.com"
-          }
-        },
-        "contact-2": {
-          "type": "contact",
-          "settings": {
-            "heading": "Sales",
-            "text": "sales@yourstore.com",
-            "link": "mailto:sales@yourstore.com"
-          }
-        },
-        "contact-3": {
-          "type": "contact",
-          "settings": {
-            "heading": "Press",
-            "text": "press@yourstore.com",
-            "link": "mailto:press@yourstore.com"
+            "heading": "Email Us",
+            "text": "hello@aspirebathrooms.com.au",
+            "link": "mailto:hello@aspirebathrooms.com.au"
           }
         },
         "media": {
@@ -99,12 +90,10 @@
       },
       "block_order": [
         "contact-0",
-        "contact-1",
-        "contact-2",
-        "contact-3",
         "media"
       ],
       "settings": {
+        "return_url": "mailto:hello@aspirebathrooms.com.au",
         "show_phone": true,
         "show_divider": false,
         "heading": "Get in touch",
@@ -122,7 +111,9 @@
           "settings": {
             "heading": "Find Our Store",
             "heading_size": "h2",
-            "heading_tag": "h2"
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
           }
         },
         "158baf73-78cc-4d45-87d8-ba682bb7d02d": {
@@ -130,7 +121,9 @@
           "settings": {
             "subheading": "Address",
             "subheading_size": "h5",
-            "secondary_color": true
+            "secondary_color": true,
+            "enable_highlight": false,
+            "highlight_style": "marker"
           }
         },
         "map-1": {
@@ -138,7 +131,9 @@
           "settings": {
             "text": "<p>Toronto, Canada</p>",
             "text_size": "typeset",
-            "secondary_color": false
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
           }
         },
         "85d6f315-c5c2-4cc5-90f3-664f99da2207": {
@@ -146,7 +141,9 @@
           "settings": {
             "subheading": "Opening hours",
             "subheading_size": "h5",
-            "secondary_color": true
+            "secondary_color": true,
+            "enable_highlight": false,
+            "highlight_style": "marker"
           }
         },
         "83d82172-71c9-4d82-a487-bc6b5b4c0d00": {
@@ -173,6 +170,7 @@
         "83d82172-71c9-4d82-a487-bc6b5b4c0d00",
         "map-2"
       ],
+      "disabled": true,
       "settings": {
         "map_address": "Toronto, Canada",
         "map_api_key": "",
@@ -191,7 +189,9 @@
         "colors_button_background": "#faeaa1",
         "colors_text": "#1a1b18",
         "colors_overlay": "#ffffff",
+        "gradient_overlay": "",
         "colors_overlay_opacity": 96,
+        "colors_highlight": "#ffb503",
         "padding_top": 36,
         "padding_bottom": 0
       }

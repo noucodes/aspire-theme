@@ -12,6 +12,31 @@
     "hero-slideshow": {
       "type": "slideshow",
       "blocks": {
+        "slide-4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/watermarked_img_13368948746750230606.jpg",
+            "image_position": "center center",
+            "text_box_position": "bottom-right",
+            "subheading": "Accessibility Solutions",
+            "subheading_size": "h5",
+            "heading": "Designed for <em>Everyone</em>",
+            "heading_size": "h0",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "typeset",
+            "button_label": "Assisted Living Range",
+            "button_link": "/collections/assisted-living",
+            "button_size": "medium",
+            "button_style_secondary": false,
+            "button_alt_label": "",
+            "button_alt_link": "",
+            "button_alt_size": "medium",
+            "button_alt_style_secondary": true,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
         "slide-1": {
           "type": "image",
           "settings": {
@@ -86,38 +111,13 @@
             "enable_highlight": false,
             "highlight_style": "marker"
           }
-        },
-        "slide-4": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Aspire_Midnight_3-Piece_Basin_Set_Matte_Black_1.png",
-            "image_position": "center center",
-            "text_box_position": "bottom-right",
-            "subheading": "Accessibility Solutions",
-            "subheading_size": "h5",
-            "heading": "Designed for <em>Everyone</em>",
-            "heading_size": "h0",
-            "heading_tag": "h2",
-            "text": "",
-            "text_size": "typeset",
-            "button_label": "Assisted Living Range",
-            "button_link": "/collections/assisted-living",
-            "button_size": "medium",
-            "button_style_secondary": false,
-            "button_alt_label": "",
-            "button_alt_link": "",
-            "button_alt_size": "medium",
-            "button_alt_style_secondary": true,
-            "enable_highlight": false,
-            "highlight_style": "marker"
-          }
         }
       },
       "block_order": [
+        "slide-4",
         "slide-1",
         "slide-2",
-        "slide-3",
-        "slide-4"
+        "slide-3"
       ],
       "settings": {
         "slideshow_type": "legacy",
@@ -216,7 +216,7 @@
         "room-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Aspire_Within_750Mm_Single_Towel_Rail_Matte_Black_2.png",
+            "image": "shopify://shop_images/The_Ultimate_Guide_to_Styling_Aspire_Matte_Black_in_Your_Bathroom.png",
             "image_position": "center center",
             "heading": "Bathroom",
             "description": "<p>Basins, baths, tapware, vanities, shower products, toilet suites, mirrors and accessories.</p>",
@@ -302,6 +302,72 @@
         "colors_highlight": "#ec6e00",
         "padding_top": 60,
         "padding_bottom": 60,
+        "enable_highlight": false,
+        "highlight_style": "marker"
+      }
+    },
+    "shop_the_look_QHVC6m": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_rTft8n": {
+          "type": "product",
+          "settings": {
+            "product": "aspire-within-300mm-towel-holder-matte-black",
+            "color": "#000000",
+            "horizontal": 70,
+            "vertical": 41
+          }
+        },
+        "product_kTBdM6": {
+          "type": "product",
+          "settings": {
+            "product": "aspire-midnight-soap-shelf-matte-black",
+            "color": "#000000",
+            "horizontal": 50,
+            "vertical": 62
+          }
+        },
+        "product_ViD3GD": {
+          "type": "product",
+          "settings": {
+            "product": "aspire-midnight-wall-mixer-w-t-spout-matte-black",
+            "color": "#000000",
+            "horizontal": 30,
+            "vertical": 65
+          }
+        }
+      },
+      "block_order": [
+        "product_rTft8n",
+        "product_kTBdM6",
+        "product_ViD3GD"
+      ],
+      "name": "t:sections.shop-the-look.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Gemini_Generated_Image_9m5gzm9m5gzm9m5g.png",
+        "layout": "image_first",
+        "text_box_position": "top",
+        "text_alignment": "left",
+        "mobile_text_alignment": "left",
+        "full_width": false,
+        "show_divider": false,
+        "heading": "Shop the Look",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "image_ratio": "adapt",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "colors_highlight": "#ffb503",
+        "padding_top": 36,
+        "padding_bottom": 36,
         "enable_highlight": false,
         "highlight_style": "marker"
       }
@@ -537,6 +603,10 @@
       ],
       "name": "t:sections.images-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/The_Ultimate_Guide_to_Styling_Aspire_Matte_Black_in_Your_Bathroom.png",
+        "image_2": "shopify://shop_images/Gemini_Generated_Image_9m5gzm9m5gzm9m5g.png",
+        "image_3": "shopify://shop_images/Aspire_Urban_II_Wf_Inwall_Suite_Round_CP_Button_Cistern_Seat_Pan_4.png",
+        "image_4": "shopify://shop_images/Aspire_Unity_Square_Hi_Rise_Vessel_Mixer_Chrome_1.png",
         "image_ratio": "portrait",
         "image_position": "center center",
         "layout": "image_first",
@@ -803,6 +873,7 @@
         "logo-5",
         "logo-6"
       ],
+      "disabled": true,
       "settings": {
         "direction": "left",
         "speed": 1.2,
@@ -841,6 +912,7 @@
         "newsletter-heading",
         "newsletter-subtext"
       ],
+      "disabled": true,
       "settings": {
         "return_url": "",
         "text_alignment": "left",
@@ -909,6 +981,7 @@
         "cta-button"
       ],
       "settings": {
+        "image": "shopify://shop_images/watermarked_img_13368948746750230606.jpg",
         "image_position": "center center",
         "text_box_position": "middle-center",
         "text_alignment": "center",
@@ -937,6 +1010,7 @@
     "hero-slideshow",
     "scrolling-promo",
     "shop-by-room",
+    "shop_the_look_QHVC6m",
     "featured-products",
     "trust-badges",
     "brand-statement",

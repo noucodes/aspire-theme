@@ -17,7 +17,7 @@
         "announce-1": {
           "type": "announcement",
           "settings": {
-            "text": "All prices are in AUD — Free standard shipping on orders over $1,000",
+            "text": "Free standard shipping on orders over $1,000",
             "text_on_mobile": "Free shipping on orders over $1,000 AUD",
             "text_size": 13,
             "link": "",
@@ -27,6 +27,7 @@
         },
         "announce-2": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Download our full product brochure — all products in one PDF",
             "text_on_mobile": "Download our product brochure",
@@ -42,7 +43,7 @@
             "text": "Find a stockist near you — view all locations",
             "text_on_mobile": "Find a stockist near you",
             "text_size": 13,
-            "link": "/pages/stockists",
+            "link": "shopify://pages/stockist",
             "enable_highlight": false,
             "highlight_style": "marker"
           }

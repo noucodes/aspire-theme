@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image-banner": {
@@ -7,32 +16,47 @@
           "type": "heading",
           "settings": {
             "heading": "About Aspire Bathrooms",
-            "heading_size": "h0"
+            "heading_size": "h0",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
           }
         },
         "text": {
           "type": "text",
           "settings": {
             "text": "<p>Helping Australians create beautiful bathrooms since day one.</p>",
-            "text_size": "typeset2"
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
           }
         }
       },
-      "block_order": ["heading", "text"],
+      "block_order": [
+        "heading",
+        "text"
+      ],
       "settings": {
-        "image": "",
+        "image": "shopify://shop_images/The_Ultimate_Guide_to_Styling_Aspire_Matte_Black_in_Your_Bathroom.png",
         "image_position": "center center",
         "text_box_position": "center",
         "text_alignment": "center",
         "image_ratio": "450px",
+        "show_text_box": false,
         "full_width": true,
+        "show_divider": false,
+        "image_behavior": "none",
         "mobile_text_alignment": "center",
         "mobile_image_ratio": "300px",
         "stack_images_on_mobile": false,
         "show_text_below": false,
+        "colors_button_label": "#1a1b18",
+        "colors_button_background": "#ffffff",
         "colors_text": "#ffffff",
         "colors_overlay": "#0a0a0a",
         "colors_overlay_opacity": 48,
+        "colors_highlight": "#ffb503",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -61,7 +85,10 @@
           }
         }
       },
-      "block_order": ["story-heading", "story-text"],
+      "block_order": [
+        "story-heading",
+        "story-text"
+      ],
       "settings": {
         "text_alignment": "center",
         "mobile_text_alignment": "center",
@@ -69,14 +96,14 @@
         "narrow": true,
         "show_divider": false,
         "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
         "colors_text": "#0a0a0a",
         "colors_background": "#ffffff",
-        "gradient_background": "",
         "colors_highlight": "#ec6e00",
+        "gradient_background": "",
         "padding_top": 72,
-        "padding_bottom": 48,
-        "enable_highlight": false,
-        "highlight_style": "marker"
+        "padding_bottom": 48
       }
     },
     "brand-values": {
@@ -135,7 +162,12 @@
           }
         }
       },
-      "block_order": ["val-1", "val-2", "val-3", "val-4"],
+      "block_order": [
+        "val-1",
+        "val-2",
+        "val-3",
+        "val-4"
+      ],
       "settings": {
         "layout": "default",
         "column_alignment": "center",
@@ -186,7 +218,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>From tapware and vanities to freestanding baths, shower systems, toilets, and accessories — we stock everything you need to complete your bathroom, kitchen, or laundry renovation in one place.</p><p>Our range spans a variety of styles from contemporary to classic, and is available in popular finishes including Matte Black, Chrome, and Stainless Steel to suit any design direction.</p>",
+            "text": "<p>From tapware and vanities to freestanding baths, shower systems, toilets, and accessories — we stock everything you need to complete your bathroom, kitchen, or laundry renovation in one place.</p><p>Our range spans a variety of styles from contemporary to classic, and is available in popular finishes to suit any design direction.</p>",
             "text_size": "typeset2",
             "secondary_color": false,
             "enable_highlight": false,
@@ -196,35 +228,47 @@
         "button": {
           "type": "button",
           "settings": {
+            "button_size": "medium",
             "button_label": "Shop All Products",
             "button_link": "/collections/all",
-            "button_size": "medium",
             "button_style_secondary": false,
-            "enable_highlight": false,
-            "highlight_style": "marker"
+            "button_alt_label": "",
+            "button_alt_link": "",
+            "button_alt_style_secondary": false
           }
         }
       },
-      "block_order": ["subheading", "heading", "text", "button"],
+      "block_order": [
+        "subheading",
+        "heading",
+        "text",
+        "button"
+      ],
       "settings": {
-        "image": "",
+        "image": "shopify://shop_images/Aspire_Unity_II_750_Vanity_1_Tap_Hole_WHung_CW_Sq_Ceramic_Top_White_4.png",
         "image_position": "center center",
         "layout": "image_first",
         "text_box_position": "middle",
         "text_alignment": "left",
         "image_ratio": "500px",
+        "enlarge_content": false,
         "full_width": true,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_layout": "image_first",
         "mobile_text_alignment": "left",
         "mobile_image_ratio": "auto",
+        "enable_video_looping": false,
+        "video_url": "",
+        "use_custom_colors": false,
         "colors_button_label": "#ffffff",
         "colors_button_background": "#ec6e00",
         "colors_text": "#0a0a0a",
         "colors_background": "#ffffff",
+        "gradient_background": "",
         "colors_highlight": "#ec6e00",
         "padding_top": 0,
-        "padding_bottom": 0,
-        "enable_highlight": false,
-        "highlight_style": "marker"
+        "padding_bottom": 0
       }
     },
     "stockists-section": {
@@ -263,35 +307,47 @@
         "button": {
           "type": "button",
           "settings": {
+            "button_size": "medium",
             "button_label": "Find a Stockist",
             "button_link": "/pages/stockists",
-            "button_size": "medium",
             "button_style_secondary": false,
-            "enable_highlight": false,
-            "highlight_style": "marker"
+            "button_alt_label": "",
+            "button_alt_link": "",
+            "button_alt_style_secondary": false
           }
         }
       },
-      "block_order": ["subheading", "heading", "text", "button"],
+      "block_order": [
+        "subheading",
+        "heading",
+        "text",
+        "button"
+      ],
       "settings": {
-        "image": "",
+        "image": "shopify://shop_images/Aspire_Unity_Square_Hi_Rise_Vessel_Mixer_Chrome_1.png",
         "image_position": "center center",
         "layout": "text_first",
         "text_box_position": "middle",
         "text_alignment": "left",
         "image_ratio": "500px",
+        "enlarge_content": false,
         "full_width": true,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_layout": "image_first",
         "mobile_text_alignment": "left",
         "mobile_image_ratio": "auto",
+        "enable_video_looping": false,
+        "video_url": "",
+        "use_custom_colors": false,
         "colors_button_label": "#ffffff",
         "colors_button_background": "#ec6e00",
         "colors_text": "#0a0a0a",
         "colors_background": "#f7f4f0",
+        "gradient_background": "",
         "colors_highlight": "#ec6e00",
         "padding_top": 0,
-        "padding_bottom": 0,
-        "enable_highlight": false,
-        "highlight_style": "marker"
+        "padding_bottom": 0
       }
     },
     "testimonials": {
@@ -302,7 +358,6 @@
           "settings": {
             "icon": "5",
             "text": "<p>\"Great quality products and fast delivery. The matte black tapware looks fantastic in our new bathroom renovation.\"</p>",
-            "image": "",
             "author": "Sarah M., Sydney",
             "enable_highlight": false,
             "highlight_style": "marker"
@@ -313,7 +368,6 @@
           "settings": {
             "icon": "5",
             "text": "<p>\"Excellent range and very competitive pricing. Found everything I needed for the bathroom and laundry in one place.\"</p>",
-            "image": "",
             "author": "James T., Melbourne",
             "enable_highlight": false,
             "highlight_style": "marker"
@@ -324,7 +378,6 @@
           "settings": {
             "icon": "5",
             "text": "<p>\"The freestanding bath we ordered is absolutely stunning. Arrived well packaged and in perfect condition.\"</p>",
-            "image": "",
             "author": "Lisa K., Brisbane",
             "enable_highlight": false,
             "highlight_style": "marker"
@@ -335,14 +388,18 @@
           "settings": {
             "icon": "5",
             "text": "<p>\"Customer service was excellent. Helped me pick the right vanity for my space. Couldn't be happier with the result.\"</p>",
-            "image": "",
             "author": "Natalie P., Adelaide",
             "enable_highlight": false,
             "highlight_style": "marker"
           }
         }
       },
-      "block_order": ["review-1", "review-2", "review-3", "review-4"],
+      "block_order": [
+        "review-1",
+        "review-2",
+        "review-3",
+        "review-4"
+      ],
       "settings": {
         "autorotate": true,
         "autorotate_speed": 5,
@@ -385,18 +442,21 @@
         "cta-buttons": {
           "type": "button",
           "settings": {
+            "button_size": "medium",
             "button_label": "Shop Now",
             "button_link": "/collections/all",
-            "button_size": "medium",
             "button_style_secondary": false,
             "button_alt_label": "Contact Us",
             "button_alt_link": "/pages/contact-us",
-            "button_alt_size": "medium",
             "button_alt_style_secondary": true
           }
         }
       },
-      "block_order": ["cta-heading", "cta-text", "cta-buttons"],
+      "block_order": [
+        "cta-heading",
+        "cta-text",
+        "cta-buttons"
+      ],
       "settings": {
         "text_alignment": "center",
         "mobile_text_alignment": "center",
@@ -411,9 +471,7 @@
         "colors_highlight": "#ec6e00",
         "gradient_background": "",
         "padding_top": 60,
-        "padding_bottom": 72,
-        "enable_highlight": false,
-        "highlight_style": "marker"
+        "padding_bottom": 72
       }
     },
     "main": {
