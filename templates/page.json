@@ -1,15 +1,91 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "narrow": true,
         "padding_top": 60,
         "padding_bottom": 72
       }
+    },
+    "map_TbDtbX": {
+      "type": "map",
+      "blocks": {
+        "heading_U3c9ez": {
+          "type": "heading",
+          "settings": {
+            "heading": "Burdens Glen Waverley Showroom ",
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "text_TBpr6D": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>350 Springvale Rd. Glen Waverley, VIC 3150</strong></p><p><strong>Monday – Friday</strong><br/>8:00 – 4:30</p><p><strong>Weekends</strong><br/>Closed<br/><br/></p>",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "button_qygkH7": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get directions",
+            "button_link": "",
+            "button_size": "small",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_U3c9ez",
+        "text_TBpr6D",
+        "button_qygkH7"
+      ],
+      "name": "t:sections.map.presets.name",
+      "settings": {
+        "map_address": "350 Springvale Rd, Glen Waverley VIC 3150, Australia",
+        "map_api_key": "4567+WX Glen Waverley, Victoria, Australia",
+        "map_zoom": 14,
+        "map_style": "silver",
+        "image": "shopify://shop_images/Gemini_Generated_Image_494iy7494iy7494i.webp",
+        "image_position": "center center",
+        "text_box_position": "middle-left",
+        "text_alignment": "left",
+        "image_ratio": "550px",
+        "full_width": true,
+        "show_divider": false,
+        "mobile_text_box_position": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "400px",
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#1a1b18",
+        "colors_overlay": "#ffffff",
+        "gradient_overlay": "",
+        "colors_overlay_opacity": 96,
+        "colors_highlight": "#ffb503",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "map_TbDtbX"
   ]
 }
