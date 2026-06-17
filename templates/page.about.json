@@ -115,9 +115,9 @@
             "icon": "star",
             "icon_size": "medium",
             "custom_icon": "",
-            "title": "Quality First",
+            "title": "Quality Products",
             "title_size": "h4",
-            "text": "<p>Every product in our range is selected for its durability, finish quality, and compliance with Australian standards.</p>",
+            "text": "<p>Premium fixtures and fittings built to last — quality over trends</p>",
             "enable_highlight": false,
             "highlight_style": "marker"
           }
@@ -130,7 +130,7 @@
             "custom_icon": "",
             "title": "Australian Brand",
             "title_size": "h4",
-            "text": "<p>Based in Australia, we understand local renovation needs and offer dedicated local customer support.</p>",
+            "text": "<p>Proudly Australian with local support and service</p>",
             "enable_highlight": false,
             "highlight_style": "marker"
           }
@@ -138,7 +138,7 @@
         "val-3": {
           "type": "guarantee",
           "settings": {
-            "icon": "chat",
+            "icon": "headset",
             "icon_size": "medium",
             "custom_icon": "",
             "title": "Expert Advice",
@@ -154,9 +154,9 @@
             "icon": "truck",
             "icon_size": "medium",
             "custom_icon": "",
-            "title": "Nationwide Delivery",
+            "title": "Free Shipping",
             "title_size": "h4",
-            "text": "<p>We ship to all states and territories across Australia, with free standard shipping on orders over $1,000 AUD.</p>",
+            "text": "<p>Free standard shipping on all orders over $1,000 AUD</p>",
             "enable_highlight": false,
             "highlight_style": "marker"
           }
