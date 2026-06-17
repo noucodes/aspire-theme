@@ -314,8 +314,8 @@
           "settings": {
             "product": "aspire-within-300mm-towel-holder-matte-black",
             "color": "#000000",
-            "horizontal": 9,
-            "vertical": 78
+            "horizontal": 70,
+            "vertical": 41
           }
         },
         "product_kTBdM6": {
@@ -323,8 +323,8 @@
           "settings": {
             "product": "aspire-midnight-soap-shelf-matte-black",
             "color": "#000000",
-            "horizontal": 70,
-            "vertical": 45
+            "horizontal": 50,
+            "vertical": 62
           }
         },
         "product_ViD3GD": {
@@ -332,7 +332,7 @@
           "settings": {
             "product": "aspire-midnight-wall-mixer-w-t-spout-matte-black",
             "color": "#000000",
-            "horizontal": 45,
+            "horizontal": 30,
             "vertical": 65
           }
         }
