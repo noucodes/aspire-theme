@@ -409,15 +409,15 @@
     "trust-badges": {
       "type": "guarantees",
       "blocks": {
-        "trust-1": {
+        "trust-3": {
           "type": "guarantee",
           "settings": {
-            "icon": "truck",
+            "icon": "star",
             "icon_size": "medium",
             "custom_icon": "",
-            "title": "Free Shipping",
+            "title": "Quality Products",
             "title_size": "h4",
-            "text": "<p>Free standard shipping on all orders over $1,000 AUD</p>",
+            "text": "<p>Premium fixtures and fittings built to last — quality over trends</p>",
             "enable_highlight": false,
             "highlight_style": "marker"
           }
@@ -435,38 +435,38 @@
             "highlight_style": "marker"
           }
         },
-        "trust-3": {
+        "trust-4": {
           "type": "guarantee",
           "settings": {
-            "icon": "star",
+            "icon": "headset",
             "icon_size": "medium",
             "custom_icon": "",
-            "title": "Quality Products",
+            "title": "Expert Advice",
             "title_size": "h4",
-            "text": "<p>Premium fixtures and fittings built to last — quality over trends</p>",
+            "text": "<p>Our team has the product knowledge to help you choose the right fixtures for your space, style, and budget.</p>",
             "enable_highlight": false,
             "highlight_style": "marker"
           }
         },
-        "trust-4": {
+        "trust-1": {
           "type": "guarantee",
           "settings": {
-            "icon": "book",
+            "icon": "truck",
             "icon_size": "medium",
             "custom_icon": "",
-            "title": "Product Brochure",
+            "title": "Free Shipping",
             "title_size": "h4",
-            "text": "<p>Download our full product catalogue as a PDF</p>",
+            "text": "<p>Free standard shipping on all orders over $1,000 AUD</p>",
             "enable_highlight": false,
             "highlight_style": "marker"
           }
         }
       },
       "block_order": [
-        "trust-1",
-        "trust-2",
         "trust-3",
-        "trust-4"
+        "trust-2",
+        "trust-4",
+        "trust-1"
       ],
       "settings": {
         "layout": "default",
