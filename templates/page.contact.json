@@ -40,7 +40,7 @@
       "settings": {
         "image": "shopify://shop_images/Aspire_Unity_II_1500_DBowl_WHung_Vanity_White_1_Tap_Hole_4.png",
         "image_position": "top center",
-        "text_box_position": "bottom-right",
+        "text_box_position": "middle-left",
         "text_alignment": "left",
         "image_ratio": "550px",
         "show_text_box": false,
