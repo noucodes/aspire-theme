@@ -9,6 +9,17 @@
  */
 {
   "sections": {
+    "custom_liquid_k49LWy": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n.burdens-locations {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));\n  gap: 24px;\n  margin: 40px 0;\n}\n\n.burdens-location {\n  border: 1px solid #e5e5e5;\n  padding: 24px;\n  border-radius: 8px;\n  background: #fff;\n}\n\n.burdens-location h3 {\n  margin: 0 0 12px;\n  font-size: 24px;\n  color: #1a1a1a;\n}\n\n.burdens-location p {\n  margin: 6px 0;\n  line-height: 1.6;\n}\n\n.burdens-location a {\n  color: #005596;\n  text-decoration: none;\n}\n\n.burdens-location a:hover {\n  text-decoration: underline;\n}\n\n.location-hours {\n  margin-top: 15px;\n  padding-top: 15px;\n  border-top: 1px solid #eee;\n}\n\n.trade-only {\n  color: #c62828;\n  font-weight: 600;\n}\n</style>\n\n<div class=\"burdens-locations\">\n\n  <div class=\"burdens-location\">\n    <h3>Balwyn</h3>\n    <p>101 Whitehorse Rd<br>Balwyn, VIC 3103</p>\n    <p><a href=\"tel:0398174521\">03 9817 4521</a></p>\n    <p><a href=\"mailto:balwynsr@burdens.com.au\">balwynsr@burdens.com.au</a></p>\n    <div class=\"location-hours\">\n      <p><strong>Monday - Friday</strong></p>\n      <p>Showroom: 8:30am - 4:30pm</p>\n    </div>\n  </div>\n\n  <div class=\"burdens-location\">\n    <h3>Braeside</h3>\n    <p>407 Lower Dandenong Rd<br>Braeside, VIC 3195</p>\n    <p><a href=\"tel:0392622111\">03 9262 2111</a></p>\n    <p><a href=\"mailto:braesidesr@burdens.com.au\">braesidesr@burdens.com.au</a></p>\n    <div class=\"location-hours\">\n      <p><strong>Monday - Friday</strong></p>\n      <p>Showroom: 8:30am - 4:30pm</p>\n    </div>\n  </div>\n\n  <div class=\"burdens-location\">\n    <h3>Cranbourne</h3>\n    <p>1/1441 South Gippsland Hwy<br>Cranbourne, VIC 3977</p>\n    <p><a href=\"tel:0359734510\">03 5973 4510</a></p>\n    <p><a href=\"mailto:cranbourne@burdens.com.au\">cranbourne@burdens.com.au</a></p>\n    <div class=\"location-hours\">\n      <p><strong>Monday - Friday</strong></p>\n      <p>Showroom: 8:30am - 4:30pm</p>\n    </div>\n  </div>\n\n  <div class=\"burdens-location\">\n    <h3>Dandenong</h3>\n    <p>203 Frankston Dandenong Rd<br>Dandenong, VIC 3175</p>\n    <p><a href=\"tel:0397038484\">03 9703 8484</a></p>\n    <p><a href=\"mailto:dandenongsr@burdens.com.au\">dandenongsr@burdens.com.au</a></p>\n    <div class=\"location-hours\">\n      <p><strong>Monday - Friday</strong></p>\n      <p>Showroom: 8:30am - 4:30pm</p>\n    </div>\n  </div>\n\n  <div class=\"burdens-location\">\n    <h3>Ferntree Gully</h3>\n    <p>1825 Ferntree Gully Rd<br>Ferntree Gully, VIC 3156</p>\n    <p><a href=\"tel:0397305500\">03 9730 5500</a></p>\n    <p><a href=\"mailto:ferntreegullysr@burdens.com.au\">ferntreegullysr@burdens.com.au</a></p>\n    <div class=\"location-hours\">\n      <p><strong>Monday - Friday</strong></p>\n      <p>Showroom: 8:30am - 4:30pm</p>\n    </div>\n  </div>\n\n  <div class=\"burdens-location\">\n    <h3>Footscray</h3>\n    <p>106 Buckley St<br>Footscray, VIC 3011</p>\n    <p><a href=\"tel:0399899200\">03 9989 9200</a></p>\n    <p><a href=\"mailto:footscraysr@burdens.com.au\">footscraysr@burdens.com.au</a></p>\n    <div class=\"location-hours\">\n      <p><strong>Monday - Friday</strong></p>\n      <p>Showroom: 8:30am - 4:30pm</p>\n    </div>\n  </div>\n\n  <div class=\"burdens-location\">\n    <h3>Glen Waverley</h3>\n    <p>350 Springvale Rd<br>Glen Waverley, VIC 3150</p>\n    <p><a href=\"tel:0385623500\">03 8562 3500</a></p>\n    <p><a href=\"mailto:glenwaverleysr@burdens.com.au\">glenwaverleysr@burdens.com.au</a></p>\n    <div class=\"location-hours\">\n      <p><strong>Monday - Friday</strong></p>\n      <p>Showroom: 8:30am - 4:30pm</p>\n    </div>\n  </div>\n\n  <div class=\"burdens-location\">\n    <h3>Lilydale</h3>\n    <p>3 John St<br>Lilydale, VIC 3140</p>\n    <p><a href=\"tel:0397396900\">03 9739 6900</a></p>\n    <p><a href=\"mailto:lilydalesr@burdens.com.au\">lilydalesr@burdens.com.au</a></p>\n    <div class=\"location-hours\">\n      <p><strong>Monday - Friday</strong></p>\n    </div>\n  </div>\n\n  <div class=\"burdens-location\">\n    <h3>Murrumbeena</h3>\n    <p>510 Neerim Road<br>Murrumbeena, VIC 3163</p>\n    <p><a href=\"tel:0395575901\">03 9557 5901</a></p>\n    <p><a href=\"mailto:murrumbeena@burdens.com.au\">murrumbeena@burdens.com.au</a></p>\n    <div class=\"location-hours\">\n      <p><strong>Monday - Friday</strong></p>\n      <p>Showroom: 8:30am - 4:30pm</p>\n    </div>\n  </div>\n\n  <div class=\"burdens-location\">\n    <h3>Officer</h3>\n    <p>414 Princes Hwy Service Rd<br>Officer, VIC 3809</p>\n    <p><a href=\"tel:0397074488\">03 9707 4488</a></p>\n    <p><a href=\"mailto:officer@burdens.com.au\">officer@burdens.com.au</a></p>\n    <div class=\"location-hours\">\n      <p><strong>Monday - Friday</strong></p>\n      <p>Showroom: 8:30am - 4:30pm</p>\n    </div>\n  </div>\n\n  <div class=\"burdens-location\">\n    <h3>Pakenham</h3>\n    <p>1 Embrey Ct<br>Pakenham, VIC 3810</p>\n    <p><a href=\"tel:0359456800\">03 5945 6800</a></p>\n    <p><a href=\"mailto:pakenhamsr@burdens.com.au\">pakenhamsr@burdens.com.au</a></p>\n    <div class=\"location-hours\">\n      <p><strong>Monday - Friday</strong></p>\n      <p>Showroom: 8:30am - 4:30pm</p>\n    </div>\n  </div>\n\n  <div class=\"burdens-location\">\n    <h3>Ringwood</h3>\n    <p>13 Oban Road<br>Ringwood, VIC 3134</p>\n    <p><a href=\"tel:0398706422\">03 9870 6422</a></p>\n    <p><a href=\"mailto:ringwoodsr@burdens.com.au\">ringwoodsr@burdens.com.au</a></p>\n    <div class=\"location-hours\">\n      <p><strong>Monday - Friday</strong></p>\n      <p>Showroom: 8:30am - 4:30pm</p>\n    </div>\n  </div>\n\n  <div class=\"burdens-location\">\n    <h3>Sheetmetal</h3>\n    <p>203 Frankston-Dandenong Rd<br>Dandenong, VIC 3175</p>\n    <p><a href=\"tel:0397038405\">03 9703 8405</a></p>\n    <p><a href=\"mailto:sheetmetal@burdens.com.au\">sheetmetal@burdens.com.au</a></p>\n    <div class=\"location-hours\">\n      <p><strong>Monday - Friday</strong></p>\n      <p>Trade Services Available</p>\n    </div>\n  </div>\n\n  <div class=\"burdens-location\">\n    <h3>Somerville</h3>\n    <p>89 Grant Road<br>Somerville, VIC 3912</p>\n    <p><a href=\"tel:0359736499\">03 5973 6499</a></p>\n    <p><a href=\"mailto:somerville@burdens.com.au\">somerville@burdens.com.au</a></p>\n    <div class=\"location-hours\">\n      <p><strong>Monday - Friday</strong></p>\n      <p>Showroom: 8:30am - 4:30pm</p>\n    </div>\n  </div>\n\n  <div class=\"burdens-location\">\n    <h3>Warragul</h3>\n    <p>1/118 Albert Rd<br>Warragul, VIC 3820</p>\n    <p><a href=\"tel:0356234511\">03 5623 4511</a></p>\n    <p><a href=\"mailto:warragulsr@burdens.com.au\">warragulsr@burdens.com.au</a></p>\n    <div class=\"location-hours\">\n      <p><strong>Monday - Friday</strong></p>\n      <p>Showroom: 8:30am - 4:30pm</p>\n    </div>\n  </div>\n\n</div>",
+        "full_width": false,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "banner": {
       "type": "image-banner",
       "blocks": {
@@ -56,59 +67,6 @@
         "colors_overlay": "#0a0a0a",
         "colors_overlay_opacity": 44,
         "colors_highlight": "#ffb503",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "store-locator": {
-      "type": "store-locator",
-      "blocks": {
-        "location-1": {
-          "type": "location",
-          "settings": {
-            "title": "Burdens Bathrooms Glen Waverley",
-            "address": "350 Springvale Rd, Glen Waverley VIC 3150, Australia",
-            "button_label": "Get Directions",
-            "button_link": "https://www.google.com/maps?sca_esv=f7ed08c59bb0b0af&rlz=1C1GCEA_enPH1085PH1085&output=search&q=Burdens+Bathrooms+Glen+Waverley&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKp9lEhFAN_4ain3HSNQWw-mOdEry7qMdvK9DVYTQhhmGPzdLibceP-axzNRyypn83aa9v77RK3nAyJbS7Ww3c5hEZ41MHuBwA1cj9fLdcvZl39JyX99GA6dTRuy8597fUa5gVhW6ji9TQaHsuXH4CUtx2nUSCgjR6EycjMi9JpkD60fmHj94qqvvZFpMtWVwcBzf9XLw&entry=mc&ved=1t:200715&ictx=111"
-          }
-        },
-        "location-2": {
-          "type": "location",
-          "settings": {
-            "title": "Stockist Location 2",
-            "address": "Australia",
-            "button_label": "Get Directions",
-            "button_link": ""
-          }
-        },
-        "location-3": {
-          "type": "location",
-          "settings": {
-            "title": "Stockist Location 3",
-            "address": "Australia",
-            "button_label": "Get Directions",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "location-1",
-        "location-2",
-        "location-3"
-      ],
-      "settings": {
-        "map_api_key": "AIzaSyDvWXClZpKD8So6MnWhDxyEBfiDLVwjg8s",
-        "map_zoom": 12,
-        "map_language": "auto",
-        "map_region": "AUS",
-        "image_ratio": "650px",
-        "full_width": true,
-        "show_divider": false,
-        "mobile_image_ratio": "100vh",
-        "colors_overlay": "#f7f4f0",
-        "colors_text": "#0a0a0a",
-        "colors_button_label": "#ffffff",
-        "colors_border": "#e0dbd5",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -182,8 +140,8 @@
     }
   },
   "order": [
+    "custom_liquid_k49LWy",
     "banner",
-    "store-locator",
     "stockist-cta",
     "main"
   ]
