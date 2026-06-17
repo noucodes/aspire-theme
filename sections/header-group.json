@@ -42,7 +42,7 @@
             "text": "Find a stockist near you — view all locations",
             "text_on_mobile": "Find a stockist near you",
             "text_size": 13,
-            "link": "/pages/stockists",
+            "link": "shopify://pages/stockist",
             "enable_highlight": false,
             "highlight_style": "marker"
           }
