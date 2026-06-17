@@ -25,10 +25,9 @@
         },
         "footer-categories": {
           "type": "link_list",
-          "disabled": true,
           "settings": {
             "heading": "Categories",
-            "menu": "main-menu-aspire",
+            "menu": "categories",
             "enable_highlight": false,
             "highlight_style": "marker"
           }
