@@ -24,7 +24,7 @@
         "heading_U3c9ez": {
           "type": "heading",
           "settings": {
-            "heading": "Burdens Glen Waverley Showroom ",
+            "heading": "Burdens Glen Waverley",
             "heading_size": "h2",
             "heading_tag": "h2",
             "enable_highlight": false,
@@ -34,7 +34,7 @@
         "text_TBpr6D": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>350 Springvale Rd. Glen Waverley, VIC 3150</strong></p><p><strong>Monday – Friday</strong><br/>8:00 – 4:30</p><p><strong>Weekends</strong><br/>Closed<br/><br/></p>",
+            "text": "<p><strong>350 Springvale Rd. Glen Waverley, VIC 3150</strong></p><p><strong>Monday – Friday</strong><br/>8:00 – 4:30</p><p><strong>Weekends</strong><br/>Closed</p>",
             "text_size": "typeset2",
             "secondary_color": false,
             "enable_highlight": false,
@@ -82,10 +82,76 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "map_EwJ7pT": {
+      "type": "map",
+      "blocks": {
+        "heading_gHpqwj": {
+          "type": "heading",
+          "settings": {
+            "heading": "Burdens Footscray",
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "text_t3n3gA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>106 Buckley St, Footscray, VIC 3011</p><p><strong>Monday – Friday</strong><br/>8:00 – 4:30</p><p><strong>Weekends</strong><br/>Closed</p>",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "button_LziEhj": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get directions",
+            "button_link": "",
+            "button_size": "small",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_gHpqwj",
+        "text_t3n3gA",
+        "button_LziEhj"
+      ],
+      "name": "t:sections.map.presets.name",
+      "settings": {
+        "map_address": "106 Buckley St, FootscrayVIC 3011",
+        "map_api_key": "",
+        "map_zoom": 14,
+        "map_style": "silver",
+        "image": "shopify://shop_images/Gemini_Generated_Image_a9srt4a9srt4a9sr.webp",
+        "image_position": "center center",
+        "text_box_position": "middle-right",
+        "text_alignment": "left",
+        "image_ratio": "550px",
+        "full_width": true,
+        "show_divider": false,
+        "mobile_text_box_position": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "400px",
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#1a1b18",
+        "colors_overlay": "#ffffff",
+        "gradient_overlay": "",
+        "colors_overlay_opacity": 96,
+        "colors_highlight": "#ffb503",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
-    "map_TbDtbX"
+    "map_TbDtbX",
+    "map_EwJ7pT"
   ]
 }
