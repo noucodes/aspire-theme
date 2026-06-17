@@ -59,7 +59,7 @@
       "name": "t:sections.map.presets.name",
       "settings": {
         "map_address": "350 Springvale Rd, Glen Waverley VIC 3150, Australia",
-        "map_api_key": "4567+WX Glen Waverley, Victoria, Australia",
+        "map_api_key": "",
         "map_zoom": 14,
         "map_style": "silver",
         "image": "shopify://shop_images/Gemini_Generated_Image_494iy7494iy7494i.webp",
