@@ -307,6 +307,89 @@
         "highlight_style": "marker"
       }
     },
+    "tab_collage_76hnbn": {
+      "type": "tab-collage",
+      "blocks": {
+        "image_NUt8Kg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Aspire_Air_4.jpg",
+            "image_position": "center center",
+            "heading": "",
+            "description": "<p>Featuring coordinated finishes and minimalist styling, Air focuses on soft, contemporary forms, while Nuovoair offers a complementary accessory range that completes the look. Together, they deliver a unified design language that makes it easy to achieve a consistent, modern bathroom aesthetic across every touchpoint.</p>",
+            "button_label": "Shop New Range",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "collection_P9AXi6": {
+          "type": "collection",
+          "settings": {
+            "collection": "aspire-air-collection-premium-modern-bathroom-tapware-accessories",
+            "image_position": "center center",
+            "heading": "Air",
+            "description": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "collection_3UFCmh": {
+          "type": "collection",
+          "settings": {
+            "collection": "aspire-nuovoair-collection-premium-bathroom-accessories-for-a-coordinated-finish",
+            "image_position": "center center",
+            "heading": "Nuovo Air",
+            "description": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "image_NUt8Kg",
+        "collection_P9AXi6",
+        "collection_3UFCmh"
+      ],
+      "name": "t:sections.tab-collage.presets.name",
+      "settings": {
+        "layout": "text_first",
+        "text_box_position": "top",
+        "text_alignment": "left",
+        "image_ratio": "650px",
+        "make_collapsible_rows": false,
+        "full_width": true,
+        "show_divider": false,
+        "heading": "New Range",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "mobile_layout": "text_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#EC6E00",
+        "colors_text": "#FFFFFF",
+        "colors_border": "#d2d5d9",
+        "colors_background": "#EC6E00",
+        "gradient_background": "",
+        "colors_highlight": "#ffb503",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "enable_highlight": false,
+        "highlight_style": "marker"
+      }
+    },
     "shop_the_look_QHVC6m": {
       "type": "shop-the-look",
       "blocks": {
@@ -366,7 +449,7 @@
         "enable_quick_view": true,
         "enable_color_swatches": true,
         "enable_countdown": true,
-        "colors_highlight": "#ffb503",
+        "colors_highlight": "#F7F4F0",
         "padding_top": 36,
         "padding_bottom": 36,
         "enable_highlight": false,
@@ -1011,6 +1094,7 @@
     "hero-slideshow",
     "scrolling-promo",
     "shop-by-room",
+    "tab_collage_76hnbn",
     "shop_the_look_QHVC6m",
     "featured-products",
     "trust-badges",
