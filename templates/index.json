@@ -355,12 +355,28 @@
             "enable_highlight": false,
             "highlight_style": "marker"
           }
+        },
+        "collection_mTfkgX": {
+          "type": "collection",
+          "settings": {
+            "collection": "aspire-nuovo-collection-modern-square-tapware-with-refined-design",
+            "image_position": "center center",
+            "heading": "Nuovo",
+            "description": "<p>The Aspire Nuovo Collection reimagines classic square tapware with a softer, more contemporary edge, delivering a refined architectural look for modern bathrooms. Designed with clean lines, balanced proportions, and subtle detailing, Nuovo offers a bold yet sophisticated aesthetic that enhances a wide range of interior styles.</p>",
+            "button_label": "Shop Nuovo Collection",
+            "button_link": "https://aspirebathrooms.com.au/collections/aspire-nuovo-collection-modern-square-tapware-with-refined-design",
+            "button_size": "medium",
+            "button_style_secondary": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
         }
       },
       "block_order": [
         "image_NUt8Kg",
         "collection_P9AXi6",
-        "collection_3UFCmh"
+        "collection_3UFCmh",
+        "collection_mTfkgX"
       ],
       "name": "t:sections.tab-collage.presets.name",
       "settings": {
@@ -378,11 +394,11 @@
         "mobile_layout": "text_first",
         "mobile_text_alignment": "right",
         "mobile_image_ratio": "auto",
-        "colors_button_label": "#FFFFFF",
+        "colors_button_label": "#ffffff",
         "colors_button_background": "#191616",
-        "colors_text": "#FFFFFF",
+        "colors_text": "#ffffff",
         "colors_border": "#d2d5d9",
-        "colors_background": "#EC6E00",
+        "colors_background": "#ec6e00",
         "gradient_background": "",
         "colors_highlight": "#ffb503",
         "padding_top": 36,
@@ -450,7 +466,7 @@
         "enable_quick_view": true,
         "enable_color_swatches": true,
         "enable_countdown": true,
-        "colors_highlight": "#F7F4F0",
+        "colors_highlight": "#f7f4f0",
         "padding_top": 36,
         "padding_bottom": 36,
         "enable_highlight": false,
