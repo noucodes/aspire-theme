@@ -261,6 +261,7 @@
         "room-4": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Aspire_Unity_Shroud_Only_to_Suit_Wall_Hung_Basin_White_4.png",
             "image_position": "center center",
             "heading": "Assisted Living",
             "description": "<p>Thoughtfully designed products for accessibility and independence.</p>",
