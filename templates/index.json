@@ -318,7 +318,7 @@
             "heading": "",
             "description": "<p>Featuring coordinated finishes and minimalist styling, Air focuses on soft, contemporary forms, while Nuovoair offers a complementary accessory range that completes the look. Together, they deliver a unified design language that makes it easy to achieve a consistent, modern bathroom aesthetic across every touchpoint.</p>",
             "button_label": "Shop New Range",
-            "button_link": "",
+            "button_link": "shopify://collections/aspire-new-range",
             "button_size": "medium",
             "button_style_secondary": false,
             "enable_highlight": false,
