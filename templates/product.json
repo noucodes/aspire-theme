@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -60,6 +69,7 @@
             "heading": "Product Specifications",
             "content": "",
             "page": "",
+            "custom_liquid": "",
             "keep_open": false
           }
         },
@@ -70,6 +80,7 @@
             "heading": "Dimensions & Downloads",
             "content": "",
             "page": "",
+            "custom_liquid": "",
             "keep_open": false
           }
         },
@@ -80,6 +91,7 @@
             "heading": "Shipping Information",
             "content": "<p>Free standard shipping on all orders over $1,000 AUD. Ships within 1–3 business days. Tracking provided.</p>",
             "page": "",
+            "custom_liquid": "",
             "keep_open": false
           }
         },
@@ -166,8 +178,11 @@
         "enable_quick_view": true,
         "enable_color_swatches": true,
         "enable_countdown": false,
+        "colors_highlight": "#ffb503",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "enable_highlight": false,
+        "highlight_style": "marker"
       }
     },
     "recently-viewed": {
@@ -250,7 +265,12 @@
           }
         }
       },
-      "block_order": ["ptrust-1", "ptrust-2", "ptrust-3", "ptrust-4"],
+      "block_order": [
+        "ptrust-1",
+        "ptrust-2",
+        "ptrust-3",
+        "ptrust-4"
+      ],
       "settings": {
         "layout": "default",
         "column_alignment": "center",
@@ -274,12 +294,36 @@
         "enable_highlight": false,
         "highlight_style": "marker"
       }
+    },
+    "17857237644d81caad": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_i8xNKR": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_i8xNKR"
+      ],
+      "settings": {
+        "include_margins": true,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "product-recommendations",
     "recently-viewed",
-    "product-trust"
+    "product-trust",
+    "17857237644d81caad"
   ]
 }
