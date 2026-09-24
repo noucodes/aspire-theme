@@ -1,9 +1,10 @@
 {% comment %}
-  Renders per-branch stock from the variant JSON metafield custom.branch_stock.
-  The JSON mirrors the stock feed columns, quantities only:
+  Pickup module ("Option A" handoff): store card + "Change store" drawer.
+  Stock comes from the variant JSON metafield custom.branch_stock, which mirrors the stock feed columns:
   { "synced_at": "2026-09-24T09:30:00+10:00", "ringwood_stock": 3, "stock_lilydale": 0, "stock_braeside_": 5, ... }
   Branch names, addresses and phones live in the directory below, keyed by feed column.
   Columns not in the directory (stock_berwick, stock_bentleigh, stock_ecommerce) are ignored.
+  Selected store is kept in the pickup_store cookie (1 year) and a pickup:store-change event is dispatched.
   Accepts:
   - variant: {Object} Variant liquid object
   Usage:
@@ -14,130 +15,268 @@
   assign directory = 'stock_balwyn|Balwyn|101 Whitehorse Rd, Balwyn VIC 3103|03 9817 4521|;stock_braeside_|Braeside|407 Lower Dandenong Rd, Braeside VIC 3195|03 9262 2111|;stock_cranbourne|Cranbourne|1/1441 South Gippsland Hwy, Cranbourne VIC 3977|03 5973 4510|;stock_dandenong|Dandenong|203 Frankston-Dandenong Rd, Dandenong South VIC 3175|03 9703 8484|;stock_ferntree_gully|Ferntree Gully|1825 Ferntree Gully Rd, Ferntree Gully VIC 3156|03 9730 5500|;stock_footscray|Footscray|106 Buckley St, Footscray VIC 3011|03 9989 9200|;stock_glen_waverley|Glen Waverley|350 Springvale Rd, Glen Waverley VIC 3150|03 8562 3500|;stock_lilydale|Lilydale|3 John St, Lilydale VIC 3140|03 9739 6900|;stock_mitcham|Mitcham|553 Whitehorse Rd, Mitcham VIC 3132|03 9874 4352|;stock_murrumbeena|Murrumbeena|510 Neerim Rd, Murrumbeena VIC 3163|03 9557 5901|;stock_officer|Officer|414 Princes Hwy Service Rd, Officer VIC 3809|03 9707 4488|;stock_pakenham|Pakenham|1 Embrey Ct, Pakenham VIC 3810|03 5945 6800|;ringwood_stock|Ringwood|13 Oban Rd, Ringwood VIC 3134|03 9870 6422|;stock_somerville|Somerville|89 Grant Rd, Somerville VIC 3912|03 5973 6499|;stock_thomastown|Thomastown|1 Chaffey St, Thomastown VIC 3074|03 9462 3490|trade;stock_warragul|Warragul|Unit 1/118 Albert Rd, Warragul VIC 3820|03 5623 4511|' | split: ';'
   assign stock = variant.metafields.custom.branch_stock.value
   assign listed = 0
-  assign in_stock = 0
   if stock != blank
     for row in directory
       assign col = row | split: '|' | first
       if stock[col] != nil
         assign listed = listed | plus: 1
-        assign qty = stock[col] | plus: 0
-        if qty > 0
-          assign in_stock = in_stock | plus: 1
-        endif
       endif
     endfor
   endif
 -%}
 {%- if listed > 0 -%}
-  <branch-stock class="branch-stock">
-    <div class="branch-stock__pickup"
-      data-text-available="{{ 'products.branch_stock.pickup_available' | t: address: '__ADDRESS__' | escape }}"
-      data-text-unavailable="{{ 'products.branch_stock.unavailable' | t: branch: '__BRANCH__' | escape }}"
-      data-text-qty="{{ 'products.branch_stock.qty' | t: count: '__QTY__' | escape }}"
-    >
-      <span class="branch-stock__status branch-stock__status--yes" data-js-yes>{% render 'icon', icon: 'tick' %}</span>
-      <span class="branch-stock__status branch-stock__status--no" data-js-no hidden>{% render 'icon', icon: 'unavailable' %}</span>
-      <div>
-        <p class="branch-stock__title" data-js-title></p>
-        <p class="branch-stock__note">
-          <span data-js-ready>{{ 'products.branch_stock.ready' | t }} · </span><span data-js-qty></span>
-        </p>
-        <p class="branch-stock__note">
-          <a data-js-phone href="#"></a>
-          <span aria-hidden="true"> · </span>
-          <label for="BranchStockSelect-{{ variant.id }}">{{ 'products.branch_stock.change_branch' | t }}</label>
-          <select id="BranchStockSelect-{{ variant.id }}" class="branch-stock__select">
-            {%- for row in directory -%}
-              {%- assign b = row | split: '|' -%}
-              {%- if stock[b[0]] != nil -%}
-                <option value="{{ b[0] }}" data-branch="{{ b[1] }}" data-qty="{{ stock[b[0]] | plus: 0 }}" data-address="{{ b[2] | escape }}" data-phone="{{ b[3] }}">{{ b[1] }}</option>
-              {%- endif -%}
-            {%- endfor -%}
-          </select>
-        </p>
-        {%- if stock.synced_at != blank -%}
-          <p class="branch-stock__note branch-stock__sync">{{ 'products.branch_stock.last_sync' | t }} {{ stock.synced_at | date: '%-d %b, %-I:%M %p' }}</p>
-        {%- endif -%}
-      </div>
-    </div>
+  {%- capture synced_at -%}
+    {%- if stock.synced_at != blank -%} · {{ 'products.branch_stock.updated' | t }} {{ stock.synced_at | date: '%-d %b, %-I:%M %p' }}{%- endif -%}
+  {%- endcapture -%}
+  <pickup-module class="pm">
+    <script type="application/json" data-pm-data>
+      {
+        "stores": [
+          {%- assign first = true -%}
+          {%- for row in directory -%}
+            {%- assign b = row | split: '|' -%}
+            {%- if stock[b[0]] != nil -%}
+              {%- unless first %},{% endunless -%}
+              {%- assign first = false -%}
+              {"id": {{ b[0] | json }}, "name": {{ b[1] | json }}, "address": {{ b[2] | json }}, "phone": {{ b[3] | json }}, "trade": {% if b[4] == 'trade' %}true{% else %}false{% endif %}, "stock": {{ stock[b[0]] | plus: 0 }}}
+            {%- endif -%}
+          {%- endfor -%}
+        ],
+        "strings": {
+          "yourStore": {{ 'products.branch_stock.your_store' | t | json }},
+          "changeStore": {{ 'products.branch_stock.change_store' | t | json }},
+          "inStock": {{ 'products.branch_stock.in_stock' | t: n: '__N__' | json }},
+          "onlyLeft": {{ 'products.branch_stock.only_left' | t: n: '__N__' | json }},
+          "transfer": {{ 'products.branch_stock.transfer' | t | json }},
+          "readyFast": {{ 'products.branch_stock.ready_fast' | t | json }},
+          "readySlow": {{ 'products.branch_stock.ready_slow' | t | json }},
+          "inStockAt": {{ 'products.branch_stock.in_stock_at' | t: n: '__N__', total: '__TOTAL__' | json }},
+          "listCount": {{ 'products.branch_stock.list_count' | t: n: '__N__', total: '__TOTAL__' | json }},
+          "select": {{ 'products.branch_stock.select' | t | json }},
+          "selectLabel": {{ 'products.branch_stock.select_label' | t: store: '__STORE__' | json }},
+          "noMatch": {{ 'products.branch_stock.no_match' | t | json }},
+          "tradeOnly": {{ 'products.branch_stock.trade_only' | t | json }}
+        },
+        "syncedAt": {{ synced_at | json }}
+      }
+    </script>
+    <div class="pm-card" data-pm-card aria-live="polite"></div>
 
-    <details class="branch-stock__list">
-      <summary>
-        <span class="branch-stock__heading">{{ 'products.branch_stock.heading' | t }}</span>
-        <span class="branch-stock__toggle">{{ 'products.branch_stock.in_stock_at' | t: count: in_stock, total: listed }}</span>
-      </summary>
-      <ul class="branch-stock__grid list-unstyled" role="list">
-        {%- for row in directory -%}
-          {%- assign b = row | split: '|' -%}
-          {%- if stock[b[0]] != nil -%}
-            {%- assign qty = stock[b[0]] | plus: 0 -%}
-            <li>
-              <span>{{ b[1] }}{% if b[4] == 'trade' %} <small>{{ 'products.branch_stock.trade_only' | t }}</small>{% endif %}</span>
-              <strong class="branch-stock__count{% if qty > 0 %} in-stock{% endif %}">{{ qty }}</strong>
-            </li>
-          {%- endif -%}
-        {%- endfor -%}
-      </ul>
-    </details>
-  </branch-stock>
+    <div class="pm-scrim" data-pm-scrim hidden></div>
+    <aside class="pm-drawer" data-pm-drawer role="dialog" aria-modal="true" aria-labelledby="PmTitle-{{ variant.id }}" hidden>
+      <div class="pm-dr-head">
+        <h2 id="PmTitle-{{ variant.id }}">{{ 'products.branch_stock.choose_store' | t }}</h2>
+        <button class="pm-close" data-pm-close type="button" aria-label="{{ 'products.branch_stock.close' | t }}">&times;</button>
+      </div>
+      <div class="pm-search">
+        <input data-pm-search type="search" placeholder="{{ 'products.branch_stock.search_placeholder' | t }}" aria-label="{{ 'products.branch_stock.search_label' | t }}" autocomplete="off">
+      </div>
+      <div class="pm-sub" data-pm-sub></div>
+      <ul class="pm-list" data-pm-list></ul>
+    </aside>
+  </pickup-module>
 
   <style>
-    .branch-stock { display: grid; gap: 1.6rem; margin: 1.6rem 0; }
-    .branch-stock__pickup { display: flex; gap: 0.8rem; align-items: flex-start; }
-    .branch-stock__status { flex: 0 0 auto; line-height: 0; margin-top: 0.3rem; }
-    .branch-stock__status .icon { width: 1.4rem; height: 1.4rem; }
-    .branch-stock__status--yes { color: #0f7b5f; }
-    .branch-stock__status--no { color: rgb(var(--color-foreground)); }
-    .branch-stock__title { margin: 0; font-size: 1.4rem; }
-    .branch-stock__note { margin: 0.4rem 0 0; font-size: 1.2rem; color: rgba(var(--color-foreground), 0.75); }
-    .branch-stock__note a { color: inherit; }
-    .branch-stock__select { font: inherit; color: rgb(var(--color-foreground)); border: 0; border-bottom: 1px solid currentColor; background: none; padding: 0 0.2rem; cursor: pointer; }
-    .branch-stock__sync { color: rgba(var(--color-foreground), 0.5); }
-    .branch-stock__list { border: 1px solid rgba(var(--color-foreground), 0.1); border-radius: 1rem; }
-    .branch-stock__list summary { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 1.6rem; list-style: none; cursor: pointer; }
-    .branch-stock__list summary::-webkit-details-marker { display: none; }
-    .branch-stock__heading { font-weight: 600; }
-    .branch-stock__toggle { color: rgba(var(--color-foreground), 0.65); }
-    .branch-stock__grid { display: grid; grid-template-columns: repeat(2, 1fr); margin: 0; border-top: 1px solid rgba(var(--color-foreground), 0.1); }
-    .branch-stock__grid li { display: flex; justify-content: space-between; gap: 0.8rem; padding: 1rem 1.6rem; border-bottom: 1px solid rgba(var(--color-foreground), 0.1); }
-    .branch-stock__grid li:nth-last-child(-n + 2):nth-child(odd),
-    .branch-stock__grid li:last-child { border-bottom: 0; }
-    .branch-stock__grid small { color: rgba(var(--color-foreground), 0.55); }
-    .branch-stock .branch-stock__grid .branch-stock__count { color: rgba(var(--color-foreground), 0.45); }
-    .branch-stock .branch-stock__grid .branch-stock__count.in-stock { color: #0f7b5f; }
-    @media screen and (max-width: 479px) {
-      .branch-stock__grid { grid-template-columns: 1fr; }
-      .branch-stock__grid li:nth-last-child(-n + 2):nth-child(odd) { border-bottom: 1px solid rgba(var(--color-foreground), 0.1); }
+    .pm {
+      --pm-surface: #ffffff; --pm-sunk: #f7f8f8; --pm-ink: #1c2527; --pm-muted: #5f6b6e;
+      --pm-line: #dfe3e2; --pm-line-strong: #c9cfce;
+      --pm-accent: #1f5566;
+      --pm-ok: #2d7a4b; --pm-ok-soft: #e5f2ea;
+      --pm-warn: #9a5f0c; --pm-warn-soft: #fbf0dc;
+      --pm-off: #6d777a; --pm-off-soft: #eceeee;
+      --pm-scrim: rgba(18, 26, 28, 0.45); --pm-shadow: 0 18px 50px rgba(18, 32, 36, 0.18);
+      display: block; margin: 1.6rem 0; color: var(--pm-ink); font-size: 15px; line-height: 1.5;
     }
+    .pm-drawer, .pm-scrim { --pm-surface: #ffffff; --pm-ink: #1c2527; --pm-muted: #5f6b6e; --pm-line: #dfe3e2; --pm-line-strong: #c9cfce; --pm-accent: #1f5566; --pm-ok: #2d7a4b; --pm-ok-soft: #e5f2ea; --pm-warn: #9a5f0c; --pm-warn-soft: #fbf0dc; --pm-off: #6d777a; --pm-off-soft: #eceeee; --pm-scrim: rgba(18, 26, 28, 0.45); --pm-shadow: 0 18px 50px rgba(18, 32, 36, 0.18); color: var(--pm-ink); font-size: 15px; line-height: 1.5; }
+    .pm *, .pm *::before, .pm *::after, .pm-drawer * { box-sizing: border-box; }
+    .pm-ic { width: 16px; height: 16px; flex: none; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .pm-card { border: 1px solid var(--pm-line); border-radius: 8px; overflow: hidden; background: var(--pm-surface); }
+    .pm-main { display: grid; gap: 6px; padding: 14px 16px; }
+    .pm-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+    .pm-eyebrow { font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--pm-muted); font-weight: 600; }
+    .pm-name { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 16px; margin: 0; }
+    .pm-addr, .pm-ready { color: var(--pm-muted); font-size: 13.5px; }
+    .pm-foot { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; padding: 10px 16px; background: var(--pm-sunk); border-top: 1px solid var(--pm-line); font-size: 13.5px; }
+    .pm-foot-count { color: var(--pm-muted); }
+    .pm-status { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; font-size: 14px; }
+    .pm-status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; flex: none; }
+    .pm-ok { color: var(--pm-ok); } .pm-low { color: var(--pm-warn); } .pm-off { color: var(--pm-off); }
+    .pm-pill { display: inline-flex; align-items: center; font-size: 12.5px; font-weight: 600; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+    .pm-pill.pm-ok { background: var(--pm-ok-soft); } .pm-pill.pm-low { background: var(--pm-warn-soft); } .pm-pill.pm-off { background: var(--pm-off-soft); }
+    .pm-link { background: none; border: 0; padding: 0; min-height: 40px; font: inherit; font-weight: 600; font-size: 14px; color: var(--pm-accent); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+    .pm-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 40px; padding: 0 14px; border: 1px solid var(--pm-line-strong); border-radius: 6px; background: var(--pm-surface); color: var(--pm-ink); font: inherit; font-weight: 600; font-size: 14px; cursor: pointer; }
+    .pm-btn:hover { border-color: var(--pm-ink); }
+    .pm-tel { display: inline-flex; align-items: center; gap: 6px; color: var(--pm-ink); text-decoration: none; font-variant-numeric: tabular-nums; }
+    .pm-tel:hover { color: var(--pm-accent); }
+    .pm button:focus-visible, .pm a:focus-visible, .pm-drawer button:focus-visible, .pm-drawer input:focus-visible { outline: 2px solid var(--pm-accent); outline-offset: 2px; }
+    .pm-scrim { position: fixed; inset: 0; background: var(--pm-scrim); z-index: 1000; }
+    .pm-drawer { position: fixed; top: 0; right: 0; bottom: 0; width: min(420px, 100%); z-index: 1001; display: flex; flex-direction: column; background: var(--pm-surface); box-shadow: var(--pm-shadow); animation: pm-slide 0.22s ease-out; }
+    .pm-drawer[hidden], .pm-scrim[hidden] { display: none; }
+    @keyframes pm-slide { from { transform: translateX(24px); opacity: 0.6; } }
+    @keyframes pm-rise { from { transform: translateY(30px); opacity: 0.6; } }
+    @media (max-width: 600px) {
+      .pm-drawer { top: auto; left: 0; width: 100%; max-height: 82vh; border-radius: 14px 14px 0 0; animation-name: pm-rise; padding-bottom: env(safe-area-inset-bottom, 0px); }
+    }
+    @media (prefers-reduced-motion: reduce) { .pm-drawer { animation: none; } }
+    .pm-dr-head { display: flex; justify-content: space-between; align-items: center; padding: 16px 18px 8px; }
+    .pm-dr-head h2 { margin: 0; font-size: 18px; }
+    .pm-close { width: 40px; height: 40px; border: 0; border-radius: 6px; background: none; color: var(--pm-ink); font-size: 24px; line-height: 1; cursor: pointer; }
+    .pm-search { padding: 0 18px 10px; }
+    .pm-search input { width: 100%; height: 44px; padding: 0 12px; border: 1px solid var(--pm-line-strong); border-radius: 6px; font: inherit; font-size: 15px; color: var(--pm-ink); background: var(--pm-surface); }
+    .pm-sub { padding: 0 18px 8px; font-size: 12.5px; color: var(--pm-muted); }
+    .pm-list { list-style: none; margin: 0; padding: 0 18px 18px; overflow-y: auto; flex: 1; }
+    .pm-list li { display: grid; grid-template-columns: 1fr auto; gap: 3px 10px; align-items: center; padding: 12px 0; border-top: 1px solid var(--pm-line); }
+    .pm-list .pm-nm { font-weight: 700; }
+    .pm-list .pm-meta { font-size: 13px; color: var(--pm-muted); }
+    .pm-list .pm-act { grid-column: 2; grid-row: 1 / 4; }
+    .pm-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--pm-accent); }
+    .pm-empty { padding: 20px 0; color: var(--pm-muted); display: block !important; }
   </style>
 
   <script>
-    // Remembers the shopper's branch; re-runs when the block is swapped on variant change.
-    if (!customElements.get('branch-stock')) {
-      customElements.define('branch-stock', class extends HTMLElement {
+    // Pickup module. product-info.js re-renders this block on variant change, so each instance reads its own data.
+    if (!customElements.get('pickup-module')) {
+      customElements.define('pickup-module', class extends HTMLElement {
         connectedCallback() {
-          const select = this.querySelector('select');
-          const box = this.querySelector('.branch-stock__pickup');
-          const el = (name) => this.querySelector('[data-js-' + name + ']');
-          let saved = null;
-          try { saved = localStorage.getItem('branch-stock'); } catch (e) {}
-          if (saved && [...select.options].some((o) => o.value === saved)) select.value = saved;
-          const update = () => {
-            const { branch, qty, address, phone } = select.selectedOptions[0].dataset;
-            const available = Number(qty) > 0;
-            el('yes').hidden = !available;
-            el('no').hidden = available;
-            el('ready').hidden = !available;
-            el('title').textContent = available
-              ? box.dataset.textAvailable.replace('__ADDRESS__', address)
-              : box.dataset.textUnavailable.replace('__BRANCH__', branch);
-            el('qty').textContent = box.dataset.textQty.replace('__QTY__', qty);
-            el('phone').textContent = branch + ' ' + phone;
-            el('phone').href = 'tel:' + phone.replace(/\s/g, '');
-            try { localStorage.setItem('branch-stock', select.value); } catch (e) {}
-          };
-          select.addEventListener('change', update);
-          update();
+          const data = JSON.parse(this.querySelector('[data-pm-data]').textContent);
+          this.stores = data.stores;
+          this.t = data.strings;
+          this.syncedAt = data.syncedAt;
+          this.card = this.querySelector('[data-pm-card]');
+          this.drawer = this.querySelector('[data-pm-drawer]');
+          this.scrim = this.querySelector('[data-pm-scrim]');
+          this.search = this.querySelector('[data-pm-search]');
+          this.list = this.querySelector('[data-pm-list]');
+          this.sub = this.querySelector('[data-pm-sub]');
+
+          const saved = decodeURIComponent((document.cookie.match('(?:^|; )pickup_store=([^;]*)') || [])[1] || '');
+          const fallback = this.stores.find((s) => s.stock > 0) || this.stores[0];
+          this.selectedId = this.stores.some((s) => s.id === saved) ? saved : fallback.id;
+
+          this.onClick = this.onClick.bind(this);
+          this.onKeydown = this.onKeydown.bind(this);
+          this.card.addEventListener('click', this.onClick);
+          this.drawer.addEventListener('click', this.onClick);
+          this.scrim.addEventListener('click', () => this.closeDrawer());
+          this.search.addEventListener('input', () => this.renderList());
+          this.renderCard();
+        }
+
+        disconnectedCallback() {
+          // The drawer is moved to <body> while open; remove it if the block is swapped out mid-open.
+          if (this.drawer.parentElement !== this) { this.scrim.remove(); this.drawer.remove(); }
+          document.removeEventListener('keydown', this.onKeydown);
+          document.documentElement.style.overflow = '';
+        }
+
+        esc(text) {
+          return String(text).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+        }
+
+        status(store) {
+          if (store.stock >= 3) return { cls: 'pm-ok', label: this.t.inStock.replace('__N__', store.stock), ready: this.t.readyFast };
+          if (store.stock >= 1) return { cls: 'pm-low', label: this.t.onlyLeft.replace('__N__', store.stock), ready: this.t.readyFast };
+          return { cls: 'pm-off', label: this.t.transfer, ready: this.t.readySlow };
+        }
+
+        current() {
+          return this.stores.find((s) => s.id === this.selectedId);
+        }
+
+        address(store) {
+          return this.esc(store.address) + (store.trade ? ' · ' + this.esc(this.t.tradeOnly) : '');
+        }
+
+        renderCard() {
+          const s = this.current(), st = this.status(s);
+          const inStock = this.stores.filter((x) => x.stock > 0).length;
+          const phone = s.phone
+            ? `<a class="pm-tel" href="tel:${s.phone.replace(/\s/g, '')}"><svg class="pm-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>${this.esc(s.phone)}</a>`
+            : '<span></span>';
+          this.card.innerHTML = `
+            <div class="pm-main">
+              <div class="pm-top">
+                <span class="pm-eyebrow">${this.esc(this.t.yourStore)}</span>
+                <button type="button" class="pm-link" data-pm-open aria-haspopup="dialog">${this.esc(this.t.changeStore)}</button>
+              </div>
+              <p class="pm-name"><svg class="pm-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>${this.esc(s.name)}</p>
+              <div><span class="pm-status ${st.cls}">${this.esc(st.label)}</span> <span class="pm-ready">· ${this.esc(st.ready)}</span></div>
+              <div class="pm-addr">${this.address(s)}</div>
+            </div>
+            <div class="pm-foot">
+              ${phone}
+              <span class="pm-foot-count">${this.esc(this.t.inStockAt.replace('__N__', inStock).replace('__TOTAL__', this.stores.length))}</span>
+            </div>`;
+        }
+
+        renderList() {
+          const q = this.search.value.trim().toLowerCase();
+          const rows = this.stores.filter((s) => !q || s.name.toLowerCase().includes(q) || s.address.toLowerCase().includes(q));
+          this.sub.textContent = this.t.listCount.replace('__N__', rows.length).replace('__TOTAL__', this.stores.length) + this.syncedAt;
+          this.list.innerHTML = rows.length
+            ? rows.map((s) => {
+                const st = this.status(s);
+                const action = s.id === this.selectedId
+                  ? `<span class="pm-tag">${this.esc(this.t.yourStore)}</span>`
+                  : `<button type="button" class="pm-btn" data-pm-select="${this.esc(s.id)}" aria-label="${this.esc(this.t.selectLabel.replace('__STORE__', s.name))}">${this.esc(this.t.select)}</button>`;
+                return `<li>
+                  <span class="pm-nm">${this.esc(s.name)}</span>
+                  <div class="pm-act">${action}</div>
+                  <span class="pm-meta">${this.address(s)}</span>
+                  <span><span class="pm-pill ${st.cls}">${this.esc(st.label)}</span> <span class="pm-meta">${this.esc(st.ready)}</span></span>
+                </li>`;
+              }).join('')
+            : `<li class="pm-empty">${this.esc(this.t.noMatch)}</li>`;
+        }
+
+        openDrawer(opener) {
+          this.lastOpener = opener;
+          this.search.value = '';
+          this.renderList();
+          // Moved to <body> so a sticky/transformed product column can't trap position: fixed.
+          document.body.append(this.scrim, this.drawer);
+          this.scrim.hidden = false;
+          this.drawer.hidden = false;
+          document.documentElement.style.overflow = 'hidden';
+          document.addEventListener('keydown', this.onKeydown);
+          setTimeout(() => this.search.focus(), 30);
+        }
+
+        closeDrawer() {
+          this.scrim.hidden = true;
+          this.drawer.hidden = true;
+          this.append(this.scrim, this.drawer);
+          document.documentElement.style.overflow = '';
+          document.removeEventListener('keydown', this.onKeydown);
+          const btn = this.card.querySelector('[data-pm-open]');
+          (this.lastOpener && this.lastOpener.isConnected ? this.lastOpener : btn)?.focus();
+        }
+
+        selectStore(id) {
+          this.selectedId = id;
+          document.cookie = 'pickup_store=' + encodeURIComponent(id) + '; path=/; max-age=31536000; SameSite=Lax';
+          this.renderCard();
+          document.dispatchEvent(new CustomEvent('pickup:store-change', { detail: { store: this.current() } }));
+        }
+
+        onClick(event) {
+          const open = event.target.closest('[data-pm-open]');
+          if (open) { this.openDrawer(open); return; }
+          const sel = event.target.closest('[data-pm-select]');
+          if (sel) { this.selectStore(sel.dataset.pmSelect); this.closeDrawer(); return; }
+          if (event.target.closest('[data-pm-close]')) this.closeDrawer();
+        }
+
+        onKeydown(event) {
+          if (this.drawer.hidden) return;
+          if (event.key === 'Escape') this.closeDrawer();
+          if (event.key === 'Tab') {
+            const focusable = this.drawer.querySelectorAll('button, input, a[href]');
+            if (!focusable.length) return;
+            const first = focusable[0], last = focusable[focusable.length - 1];
+            if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+            else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+          }
         }
       });
     }

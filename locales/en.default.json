@@ -336,15 +336,24 @@
   },
   "products": {
     "branch_stock": {
-      "pickup_available": "Pickup available at {{ address }}",
-      "unavailable": "Not in stock at {{ branch }}",
-      "ready": "Usually ready in 24 hours",
-      "qty": "{{ count }} in stock",
-      "change_branch": "Change branch",
-      "heading": "Stock by branch",
-      "in_stock_at": "In stock at {{ count }} of {{ total }}",
+      "your_store": "Your store",
+      "change_store": "Change store",
+      "choose_store": "Choose your store",
+      "close": "Close store list",
+      "search_placeholder": "Search by suburb",
+      "search_label": "Search stores by suburb",
+      "in_stock": "{{ n }} in stock",
+      "only_left": "Only {{ n }} left",
+      "transfer": "Available via transfer",
+      "ready_fast": "Ready within 24 hrs",
+      "ready_slow": "Ready in 3–5 business days",
+      "in_stock_at": "In stock at {{ n }} of {{ total }} stores",
+      "list_count": "{{ n }} of {{ total }} stores",
+      "select": "Select",
+      "select_label": "Select {{ store }}",
+      "no_match": "No stores match that suburb. Try a nearby suburb name.",
       "trade_only": "Trade only",
-      "last_sync": "Last sync"
+      "updated": "Updated"
     },
     "facets": {
       "apply": "Apply",
