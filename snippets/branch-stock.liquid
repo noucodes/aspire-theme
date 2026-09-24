@@ -1,0 +1,145 @@
+{% comment %}
+  Renders per-branch stock from the variant JSON metafield custom.branch_stock.
+  The JSON mirrors the stock feed columns, quantities only:
+  { "synced_at": "2026-09-24T09:30:00+10:00", "ringwood_stock": 3, "stock_lilydale": 0, "stock_braeside_": 5, ... }
+  Branch names, addresses and phones live in the directory below, keyed by feed column.
+  Columns not in the directory (stock_berwick, stock_bentleigh, stock_ecommerce) are ignored.
+  Accepts:
+  - variant: {Object} Variant liquid object
+  Usage:
+  {% render 'branch-stock', variant: product.selected_or_first_available_variant %}
+{% endcomment %}
+{%- liquid
+  # ponytail: branch directory hardcoded here; move to a metaobject if staff need to edit it in admin
+  assign directory = 'stock_balwyn|Balwyn|101 Whitehorse Rd, Balwyn VIC 3103|03 9817 4521|;stock_braeside_|Braeside|407 Lower Dandenong Rd, Braeside VIC 3195|03 9262 2111|;stock_cranbourne|Cranbourne|1/1441 South Gippsland Hwy, Cranbourne VIC 3977|03 5973 4510|;stock_dandenong|Dandenong|203 Frankston-Dandenong Rd, Dandenong South VIC 3175|03 9703 8484|;stock_ferntree_gully|Ferntree Gully|1825 Ferntree Gully Rd, Ferntree Gully VIC 3156|03 9730 5500|;stock_footscray|Footscray|106 Buckley St, Footscray VIC 3011|03 9989 9200|;stock_glen_waverley|Glen Waverley|350 Springvale Rd, Glen Waverley VIC 3150|03 8562 3500|;stock_lilydale|Lilydale|3 John St, Lilydale VIC 3140|03 9739 6900|;stock_mitcham|Mitcham|553 Whitehorse Rd, Mitcham VIC 3132|03 9874 4352|;stock_murrumbeena|Murrumbeena|510 Neerim Rd, Murrumbeena VIC 3163|03 9557 5901|;stock_officer|Officer|414 Princes Hwy Service Rd, Officer VIC 3809|03 9707 4488|;stock_pakenham|Pakenham|1 Embrey Ct, Pakenham VIC 3810|03 5945 6800|;ringwood_stock|Ringwood|13 Oban Rd, Ringwood VIC 3134|03 9870 6422|;stock_somerville|Somerville|89 Grant Rd, Somerville VIC 3912|03 5973 6499|;stock_thomastown|Thomastown|1 Chaffey St, Thomastown VIC 3074|03 9462 3490|trade;stock_warragul|Warragul|Unit 1/118 Albert Rd, Warragul VIC 3820|03 5623 4511|' | split: ';'
+  assign stock = variant.metafields.custom.branch_stock.value
+  assign listed = 0
+  assign in_stock = 0
+  if stock != blank
+    for row in directory
+      assign col = row | split: '|' | first
+      if stock[col] != nil
+        assign listed = listed | plus: 1
+        assign qty = stock[col] | plus: 0
+        if qty > 0
+          assign in_stock = in_stock | plus: 1
+        endif
+      endif
+    endfor
+  endif
+-%}
+{%- if listed > 0 -%}
+  <branch-stock class="branch-stock">
+    <div class="branch-stock__pickup"
+      data-text-available="{{ 'products.branch_stock.pickup_available' | t: address: '__ADDRESS__' | escape }}"
+      data-text-unavailable="{{ 'products.branch_stock.unavailable' | t: branch: '__BRANCH__' | escape }}"
+      data-text-qty="{{ 'products.branch_stock.qty' | t: count: '__QTY__' | escape }}"
+    >
+      <span class="branch-stock__status branch-stock__status--yes" data-js-yes>{% render 'icon', icon: 'tick' %}</span>
+      <span class="branch-stock__status branch-stock__status--no" data-js-no hidden>{% render 'icon', icon: 'unavailable' %}</span>
+      <div>
+        <p class="branch-stock__title" data-js-title></p>
+        <p class="branch-stock__note">
+          <span data-js-ready>{{ 'products.branch_stock.ready' | t }} · </span><span data-js-qty></span>
+        </p>
+        <p class="branch-stock__note">
+          <a data-js-phone href="#"></a>
+          <span aria-hidden="true"> · </span>
+          <label for="BranchStockSelect-{{ variant.id }}">{{ 'products.branch_stock.change_branch' | t }}</label>
+          <select id="BranchStockSelect-{{ variant.id }}" class="branch-stock__select">
+            {%- for row in directory -%}
+              {%- assign b = row | split: '|' -%}
+              {%- if stock[b[0]] != nil -%}
+                <option value="{{ b[0] }}" data-branch="{{ b[1] }}" data-qty="{{ stock[b[0]] | plus: 0 }}" data-address="{{ b[2] | escape }}" data-phone="{{ b[3] }}">{{ b[1] }}</option>
+              {%- endif -%}
+            {%- endfor -%}
+          </select>
+        </p>
+        {%- if stock.synced_at != blank -%}
+          <p class="branch-stock__note branch-stock__sync">{{ 'products.branch_stock.last_sync' | t }} {{ stock.synced_at | date: '%-d %b, %-I:%M %p' }}</p>
+        {%- endif -%}
+      </div>
+    </div>
+
+    <details class="branch-stock__list">
+      <summary>
+        <span class="branch-stock__heading">{{ 'products.branch_stock.heading' | t }}</span>
+        <span class="branch-stock__toggle">{{ 'products.branch_stock.in_stock_at' | t: count: in_stock, total: listed }}</span>
+      </summary>
+      <ul class="branch-stock__grid list-unstyled" role="list">
+        {%- for row in directory -%}
+          {%- assign b = row | split: '|' -%}
+          {%- if stock[b[0]] != nil -%}
+            {%- assign qty = stock[b[0]] | plus: 0 -%}
+            <li>
+              <span>{{ b[1] }}{% if b[4] == 'trade' %} <small>{{ 'products.branch_stock.trade_only' | t }}</small>{% endif %}</span>
+              <strong class="branch-stock__count{% if qty > 0 %} in-stock{% endif %}">{{ qty }}</strong>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    </details>
+  </branch-stock>
+
+  <style>
+    .branch-stock { display: grid; gap: 1.6rem; margin: 1.6rem 0; }
+    .branch-stock__pickup { display: flex; gap: 0.8rem; align-items: flex-start; }
+    .branch-stock__status { flex: 0 0 auto; line-height: 0; margin-top: 0.3rem; }
+    .branch-stock__status .icon { width: 1.4rem; height: 1.4rem; }
+    .branch-stock__status--yes { color: #0f7b5f; }
+    .branch-stock__status--no { color: rgb(var(--color-foreground)); }
+    .branch-stock__title { margin: 0; font-size: 1.4rem; }
+    .branch-stock__note { margin: 0.4rem 0 0; font-size: 1.2rem; color: rgba(var(--color-foreground), 0.75); }
+    .branch-stock__note a { color: inherit; }
+    .branch-stock__select { font: inherit; color: rgb(var(--color-foreground)); border: 0; border-bottom: 1px solid currentColor; background: none; padding: 0 0.2rem; cursor: pointer; }
+    .branch-stock__sync { color: rgba(var(--color-foreground), 0.5); }
+    .branch-stock__list { border: 1px solid rgba(var(--color-foreground), 0.1); border-radius: 1rem; }
+    .branch-stock__list summary { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 1.6rem; list-style: none; cursor: pointer; }
+    .branch-stock__list summary::-webkit-details-marker { display: none; }
+    .branch-stock__heading { font-weight: 600; }
+    .branch-stock__toggle { color: rgba(var(--color-foreground), 0.65); }
+    .branch-stock__grid { display: grid; grid-template-columns: repeat(2, 1fr); margin: 0; border-top: 1px solid rgba(var(--color-foreground), 0.1); }
+    .branch-stock__grid li { display: flex; justify-content: space-between; gap: 0.8rem; padding: 1rem 1.6rem; border-bottom: 1px solid rgba(var(--color-foreground), 0.1); }
+    .branch-stock__grid li:nth-last-child(-n + 2):nth-child(odd),
+    .branch-stock__grid li:last-child { border-bottom: 0; }
+    .branch-stock__grid small { color: rgba(var(--color-foreground), 0.55); }
+    .branch-stock .branch-stock__grid .branch-stock__count { color: rgba(var(--color-foreground), 0.45); }
+    .branch-stock .branch-stock__grid .branch-stock__count.in-stock { color: #0f7b5f; }
+    @media screen and (max-width: 479px) {
+      .branch-stock__grid { grid-template-columns: 1fr; }
+      .branch-stock__grid li:nth-last-child(-n + 2):nth-child(odd) { border-bottom: 1px solid rgba(var(--color-foreground), 0.1); }
+    }
+  </style>
+
+  <script>
+    // Remembers the shopper's branch; re-runs when the block is swapped on variant change.
+    if (!customElements.get('branch-stock')) {
+      customElements.define('branch-stock', class extends HTMLElement {
+        connectedCallback() {
+          const select = this.querySelector('select');
+          const box = this.querySelector('.branch-stock__pickup');
+          const el = (name) => this.querySelector('[data-js-' + name + ']');
+          let saved = null;
+          try { saved = localStorage.getItem('branch-stock'); } catch (e) {}
+          if (saved && [...select.options].some((o) => o.value === saved)) select.value = saved;
+          const update = () => {
+            const { branch, qty, address, phone } = select.selectedOptions[0].dataset;
+            const available = Number(qty) > 0;
+            el('yes').hidden = !available;
+            el('no').hidden = available;
+            el('ready').hidden = !available;
+            el('title').textContent = available
+              ? box.dataset.textAvailable.replace('__ADDRESS__', address)
+              : box.dataset.textUnavailable.replace('__BRANCH__', branch);
+            el('qty').textContent = box.dataset.textQty.replace('__QTY__', qty);
+            el('phone').textContent = branch + ' ' + phone;
+            el('phone').href = 'tel:' + phone.replace(/\s/g, '');
+            try { localStorage.setItem('branch-stock', select.value); } catch (e) {}
+          };
+          select.addEventListener('change', update);
+          update();
+        }
+      });
+    }
+  </script>
+{%- endif -%}

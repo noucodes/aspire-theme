@@ -96,5 +96,16 @@
         endfor
       -%}
     </div>
+
+    {%- if product.media.size > 1 -%}
+      <div class="product-media-modal__thumbs">
+        {%- for media in product.media -%}
+          {%- if section.settings.hide_variants and variant_images contains media.src -%}{%- continue -%}{%- endif -%}
+          <button type="button" class="product-media-modal__thumb" data-target="{{ media.id }}" aria-label="{{ media.alt | default: product.title | escape }}">
+            {{ media.preview_image | image_url: width: 160 | image_tag: loading: 'lazy', alt: '' }}
+          </button>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
   </div>
 </product-modal>

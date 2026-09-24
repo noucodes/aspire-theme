@@ -84,7 +84,7 @@
             "heading": "Dimensions & Downloads",
             "content": "",
             "page": "",
-            "custom_liquid": "",
+            "custom_liquid": "{%- assign spec = product.metafields.custom.url_to_pdf_specification_sheet.value -%}{%- assign warranty = product.metafields.custom.warranty_url_to_pdf.value -%}<ul>{%- if spec != blank -%}<li><a href=\"{{ spec | escape }}\" target=\"_blank\" rel=\"noopener\">Download Specification Sheet (PDF)</a></li>{%- endif -%}{%- if warranty != blank -%}<li><a href=\"{{ warranty | escape }}\" target=\"_blank\" rel=\"noopener\">Download Warranty (PDF)</a></li>{%- endif -%}</ul>",
             "keep_open": false
           }
         },
@@ -105,6 +105,12 @@
             "show_quantity_selector": true,
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": false
+          }
+        },
+        "branch_stock": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render \"branch-stock\", variant: product.selected_or_first_available_variant %}"
           }
         },
         "inventory_status": {
@@ -141,6 +147,7 @@
         "tab-dimensions",
         "tab-shipping",
         "buy_buttons",
+        "branch_stock",
         "inventory_status",
         "share",
         "sticky_cart"
@@ -175,7 +182,7 @@
         "swipe_on_mobile": true,
         "image_ratio": "portrait",
         "image_position": "center center",
-        "enable_image_fill": true,
+        "enable_image_fill": false,
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": true,
@@ -287,7 +294,7 @@
         "heading_size": "h1",
         "heading_tag": "h2",
         "columns_mobile": "2",
-        "swipe_on_mobile": true,
+        "swipe_on_mobile": false,
         "use_custom_colors": true,
         "colors_icon": "#ec6e00",
         "colors_text": "#0a0a0a",

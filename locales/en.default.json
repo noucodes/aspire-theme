@@ -335,6 +335,17 @@
     "product_title": "Example product title"
   },
   "products": {
+    "branch_stock": {
+      "pickup_available": "Pickup available at {{ address }}",
+      "unavailable": "Not in stock at {{ branch }}",
+      "ready": "Usually ready in 24 hours",
+      "qty": "{{ count }} in stock",
+      "change_branch": "Change branch",
+      "heading": "Stock by branch",
+      "in_stock_at": "In stock at {{ count }} of {{ total }}",
+      "trade_only": "Trade only",
+      "last_sync": "Last sync"
+    },
     "facets": {
       "apply": "Apply",
       "clear": "Clear",

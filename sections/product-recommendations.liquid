@@ -5,6 +5,16 @@
     --image-position: {{ section.settings.image_position }};
     --color-highlight: {{ section.settings.colors_highlight.red }}, {{ section.settings.colors_highlight.green }}, {{ section.settings.colors_highlight.blue }};
   }
+  #shopify-section-{{ section.id }} .slider { scrollbar-width: none; }
+  #shopify-section-{{ section.id }} .slider::-webkit-scrollbar { display: none; }
+  #shopify-section-{{ section.id }} .slider-mobile-gutter { display: block; }
+  #shopify-section-{{ section.id }} .slider-buttons {
+    display: flex;
+    position: static;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0 0;
+  }
 {%- endstyle -%}
 
 <link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -41,7 +51,7 @@
           >
             {%- for recommendation in recommendations.products -%}
               <li id="Slide-{{ section.id }}-{{ forloop.index }}"
-                class="flex-grid__item">
+                class="flex-grid__item slider__slide">
                 {% render 'card-product',
                   card_product: recommendation,
                   card_collection: collection,
@@ -58,6 +68,14 @@
               </li>
             {%- endfor -%}
           </ul>
+          <div class="slider-buttons no-js-hidden">
+            <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}" disabled="disabled">
+              {% render 'icon', icon: 'arrow' %}
+            </button>
+            <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">
+              {% render 'icon', icon: 'arrow' %}
+            </button>
+          </div>
         </slider-component>
       </div>
     </div>

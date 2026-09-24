@@ -16,6 +16,12 @@ git commit -m "description"
 git push
 ```
 
+Store: `aspire-bathrooms1.myshopify.com` (public domain aspirebathrooms.com.au). This is not the Burdens Plumbing store. Local preview:
+
+```bash
+shopify theme dev --store aspire-bathrooms1.myshopify.com
+```
+
 ## Architecture
 
 ### Directory Structure
