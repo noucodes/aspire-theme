@@ -364,6 +364,11 @@
 
 .card__media .media > img,
 .card__media .media > picture img {
+  object-fit: cover;
+}
+
+.card__media .media--image-contain > img,
+.card__media .media--image-contain > picture img {
   object-fit: contain;
 }
 
