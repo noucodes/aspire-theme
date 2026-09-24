@@ -574,7 +574,7 @@
       {
         "type": "text",
         "id": "shipping_calculator_default_country",
-        "default": "United States",
+        "default": "Australia",
         "label": "t:settings_schema.cart-drawer.settings.shipping_calculator_default_country.label",
         "info": "t:settings_schema.cart-drawer.settings.shipping_calculator_default_country.info"
       },

@@ -34,8 +34,9 @@
     },
     "shipping-calculator": {
       "type": "shipping-calculator",
+      "disabled": true,
       "settings": {
-        "default_country": "United States",
+        "default_country": "Australia",
         "secondary_background": false,
         "heading": "Estimate Shipping",
         "heading_size": "h3",
