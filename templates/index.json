@@ -551,14 +551,13 @@
         },
         "trust-1": {
           "type": "guarantee",
-          "disabled": true,
           "settings": {
             "icon": "truck",
             "icon_size": "medium",
             "custom_icon": "",
-            "title": "Free Shipping",
+            "title": "Shipping",
             "title_size": "h4",
-            "text": "<p>Free standard shipping on all orders over $1,000 AUD</p>",
+            "text": "<p>Fast, straightforward shipping across Australia.</p>",
             "enable_highlight": false,
             "highlight_style": "marker"
           }
@@ -576,7 +575,7 @@
         "horizontal_content": false,
         "full_width": true,
         "show_divider": false,
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "heading": "",
         "heading_size": "h1",
         "heading_tag": "h2",
