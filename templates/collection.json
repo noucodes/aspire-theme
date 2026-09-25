@@ -80,9 +80,9 @@
             "icon": "truck",
             "icon_size": "medium",
             "custom_icon": "",
-            "title": "Free Shipping",
+            "title": "&nbsp;Product Brochure&nbsp;",
             "title_size": "h4",
-            "text": "<p>On orders over $1,000 AUD</p>",
+            "text": "<ul><li>Download our full catalogue</li></ul>",
             "enable_highlight": false,
             "highlight_style": "marker"
           }
@@ -90,12 +90,12 @@
         "ctrust-2": {
           "type": "guarantee",
           "settings": {
-            "icon": "shield",
+            "icon": "star",
             "icon_size": "medium",
             "custom_icon": "",
-            "title": "Australian Brand",
+            "title": "&nbsp;Quality Products",
             "title_size": "h4",
-            "text": "<p>Local support & service</p>",
+            "text": "<p>Premium fixtures and fittings built to last — quality over trends</p>",
             "enable_highlight": false,
             "highlight_style": "marker"
           }
@@ -103,12 +103,12 @@
         "ctrust-3": {
           "type": "guarantee",
           "settings": {
-            "icon": "star",
+            "icon": "shield",
             "icon_size": "medium",
             "custom_icon": "",
-            "title": "Quality Guaranteed",
+            "title": "&nbsp;Australian Brand",
             "title_size": "h4",
-            "text": "<p>Premium fixtures built to last</p>",
+            "text": "<p>Proudly Australian with local support and service</p>",
             "enable_highlight": false,
             "highlight_style": "marker"
           }
@@ -116,12 +116,12 @@
         "ctrust-4": {
           "type": "guarantee",
           "settings": {
-            "icon": "download",
+            "icon": "headset",
             "icon_size": "medium",
             "custom_icon": "",
-            "title": "Product Brochure",
+            "title": "&nbsp;Expert Advice",
             "title_size": "h4",
-            "text": "<p>Download our full catalogue</p>",
+            "text": "<p>Our team has the product knowledge to help you choose the right fixtures for your space, style, and budget.</p>",
             "enable_highlight": false,
             "highlight_style": "marker"
           }
