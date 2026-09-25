@@ -227,7 +227,7 @@
         "ptrust-1": {
           "type": "guarantee",
           "settings": {
-            "icon": "truck",
+            "icon": "star",
             "icon_size": "medium",
             "custom_icon": "",
             "title": "&nbsp;Quality Products&nbsp;",
@@ -245,7 +245,7 @@
             "custom_icon": "",
             "title": "Australian Brand",
             "title_size": "h4",
-            "text": "<p>Local support & service</p>",
+            "text": "<p>Proudly Australian with local support and service</p>",
             "enable_highlight": false,
             "highlight_style": "marker"
           }
@@ -253,12 +253,12 @@
         "ptrust-3": {
           "type": "guarantee",
           "settings": {
-            "icon": "star",
+            "icon": "headset",
             "icon_size": "medium",
             "custom_icon": "",
             "title": "Quality Guaranteed",
             "title_size": "h4",
-            "text": "<p>Premium fixtures built to last</p>",
+            "text": "<p>Our team has the product knowledge to help you choose the right fixtures for your space, style, and budget.</p>",
             "enable_highlight": false,
             "highlight_style": "marker"
           }
