@@ -550,6 +550,7 @@
         },
         "trust-1": {
           "type": "guarantee",
+          "disabled": true,
           "settings": {
             "icon": "truck",
             "icon_size": "medium",
@@ -574,7 +575,7 @@
         "horizontal_content": false,
         "full_width": true,
         "show_divider": false,
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "heading": "",
         "heading_size": "h1",
         "heading_tag": "h2",
