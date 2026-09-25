@@ -75,6 +75,7 @@
       "blocks": {
         "ctrust-1": {
           "type": "guarantee",
+          "disabled": true,
           "settings": {
             "icon": "truck",
             "icon_size": "medium",
@@ -115,7 +116,7 @@
         "ctrust-4": {
           "type": "guarantee",
           "settings": {
-            "icon": "book",
+            "icon": "download",
             "icon_size": "medium",
             "custom_icon": "",
             "title": "Product Brochure",
@@ -138,7 +139,7 @@
         "horizontal_content": false,
         "full_width": true,
         "show_divider": true,
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "heading": "",
         "heading_size": "h1",
         "heading_tag": "h2",
