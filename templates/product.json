@@ -230,9 +230,9 @@
             "icon": "truck",
             "icon_size": "medium",
             "custom_icon": "",
-            "title": "Free Shipping",
+            "title": "&nbsp;Quality Products&nbsp;",
             "title_size": "h4",
-            "text": "<p>On orders over $1,000 AUD</p>",
+            "text": "<p>Premium fixtures and fittings built to last — quality over trends</p>",
             "enable_highlight": false,
             "highlight_style": "marker"
           }
@@ -266,12 +266,12 @@
         "ptrust-4": {
           "type": "guarantee",
           "settings": {
-            "icon": "book",
+            "icon": "package",
             "icon_size": "medium",
             "custom_icon": "",
-            "title": "Product Brochure",
+            "title": "Shipping",
             "title_size": "h4",
-            "text": "<p>Download our full catalogue</p>",
+            "text": "<p>Fast, straightforward shipping across Australia</p>",
             "enable_highlight": false,
             "highlight_style": "marker"
           }
