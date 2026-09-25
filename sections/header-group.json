@@ -56,8 +56,8 @@
       ],
       "settings": {
         "only_homepage": false,
-        "layout": "default",
-        "mobile_layout": "carousel",
+        "layout": "marquee",
+        "mobile_layout": "marquee",
         "autorotate": true,
         "autorotate_speed": 5,
         "show_navigation": true,
