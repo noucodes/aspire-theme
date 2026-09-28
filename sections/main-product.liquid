@@ -57,7 +57,12 @@
   #Slider-Gallery-{{ section.id }} {
     --force-image-ratio-percent: {{ first_image_ratio }}%;
   }
-  
+
+  #Slider-Gallery-{{ section.id }} .media > img,
+  #Slider-Gallery-{{ section.id }} .media > picture img {
+    object-fit: contain;
+  }
+
   @media screen and (max-width: 749px) {
     #Slider-Gallery-{{ section.id }} .media-mobile--adapt_first {
       padding-bottom: {{ first_image_ratio }}%;
