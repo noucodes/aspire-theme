@@ -111,13 +111,57 @@
     display: none;
   }
 
-  .collection .slider-buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
+  /* Hide the scrollbar; arrows drive the carousel */
+  slider-component.collection .slider.slider--tablet-up {
+    scrollbar-width: none;
   }
 
-  .collection.slider--no-buttons .slider-buttons {
+  slider-component.collection .slider.slider--tablet-up::-webkit-scrollbar {
+    display: none;
+  }
+
+  slider-component.collection {
+    position: relative;
+  }
+
+  slider-component.collection .slider-buttons {
+    display: block;
+  }
+
+  slider-component.collection .slider-button {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border: 1px solid #E6E0D6;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transform: translateY(-50%);
+  }
+
+  slider-component.collection .slider-button--prev {
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  slider-component.collection .slider-button--next {
+    right: 0;
+    transform: translate(50%, -50%);
+  }
+
+  slider-component.collection .slider-button--next::after {
+    display: none;
+  }
+
+  slider-component.collection .slider-button[disabled] {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  slider-component.collection.slider--no-buttons .slider-buttons {
     display: none;
   }
 }
