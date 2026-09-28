@@ -126,6 +126,7 @@
 
   slider-component.collection .slider-buttons {
     display: block;
+    position: static;
   }
 
   slider-component.collection .slider-button {
