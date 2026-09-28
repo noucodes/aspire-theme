@@ -81,3 +81,43 @@
     background-size: 100% 0.1rem, 100% 0.1rem;
   }
 }
+
+/* Carousel cards (tablet and up; mobile keeps the compact horizontal list) */
+@media screen and (min-width: 750px) {
+  .collection-list__item .card--media {
+    background: #FFFFFF;
+    border: 1px solid #E6E0D6;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100%;
+  }
+
+  .collection-list__item .card--media .media > img {
+    object-fit: contain;
+  }
+
+  .collection-list__item .card--media .card__text-spacing {
+    position: static;
+    height: auto;
+    padding: 1.6rem 0 0;
+    color: rgb(var(--color-foreground));
+  }
+
+  .collection-list__item .card--media .card__text-spacing::after {
+    display: none;
+  }
+
+  .collection .slider-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .collection.slider--no-buttons .slider-buttons {
+    display: none;
+  }
+}

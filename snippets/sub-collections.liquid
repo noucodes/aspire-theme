@@ -34,4 +34,12 @@
       {%- endif -%}
     {%- endfor -%}
   </ul>
+  <div class="slider-buttons no-js-hidden small-hide">
+    <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}" disabled="disabled">
+      {% render 'icon', icon: 'arrow' %}
+    </button>
+    <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">
+      {% render 'icon', icon: 'arrow' %}
+    </button>
+  </div>
 </slider-component>
