@@ -57,7 +57,7 @@
     "show_shipping_calculator": false,
     "shipping_calculator_default_country": "Australia",
     "disable_view_cart": false,
-    "show_free_shipping_message": true,
+    "show_free_shipping_message": false,
     "free_shipping_minimum_amount": "AUD:1000",
     "cart_recommendations_enabled": true,
     "cart_recommendations_heading": "You may also like",
