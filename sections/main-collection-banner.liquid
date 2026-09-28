@@ -14,7 +14,10 @@
 
 <style>
   .collection-hero__description--truncated {
-    max-height: 7.5rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
     overflow: hidden;
   }
   .collection-hero__see-more {
@@ -116,7 +119,7 @@
           <div
             class="collection-hero__description rte collection-hero__description--truncated"
             id="collection-desc-{{ section.id }}"
-          >{{ collection.description }}</div>
+          >{{ collection.description | strip_html | strip }}</div>
           <button
             id="collection-see-more-{{ section.id }}"
             class="collection-hero__see-more"

@@ -84,7 +84,8 @@
 
 /* Carousel cards (tablet and up; mobile keeps the compact horizontal list) */
 @media screen and (min-width: 750px) {
-  .collection-list__item .card--media {
+  .collection-list__item .card--media,
+  .collection-list__item .card--text {
     background: #FFFFFF;
     border: 1px solid #E6E0D6;
     border-radius: 16px;
@@ -108,6 +109,22 @@
   }
 
   .collection-list__item .card--media .card__text-spacing::after {
+    display: none;
+  }
+
+  /* No image: keep the card shape, title at the bottom, no grey box or description */
+  .collection-list__item .card--text .card__inner,
+  .collection-list__item .card--text .media {
+    background: none;
+  }
+
+  .collection-list__item .card--text .card__content {
+    padding: 0;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .collection-list__item .card--text .card__caption {
     display: none;
   }
 

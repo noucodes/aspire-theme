@@ -15,7 +15,7 @@
 {%- liquid
   assign featured_image = collection.featured_image
   if grid_image == 'product'
-    assign featured_image = collection.products.first.featured_media
+    assign featured_image = collection.products.first.featured_media | default: collection.featured_image
   endif
 -%}
 
