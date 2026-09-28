@@ -112,20 +112,17 @@
     display: none;
   }
 
-  /* No image: keep the card shape, title at the bottom, no grey box or description */
+  /* No image: original title + description card, with the same border and height */
+  .collection-list__item .card--text {
+    background: none;
+    padding: 0;
+    overflow: hidden;
+  }
+
   .collection-list__item .card--text .card__inner,
   .collection-list__item .card--text .media {
-    background: none;
-  }
-
-  .collection-list__item .card--text .card__content {
-    padding: 0;
-    display: flex;
-    align-items: flex-end;
-  }
-
-  .collection-list__item .card--text .card__caption {
-    display: none;
+    height: 100%;
+    padding-bottom: 0;
   }
 
   /* Hide the scrollbar; arrows drive the carousel */
