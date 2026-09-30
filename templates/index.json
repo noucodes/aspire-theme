@@ -356,12 +356,28 @@
             "enable_highlight": false,
             "highlight_style": "marker"
           }
+        },
+        "collection_4QWUAH": {
+          "type": "collection",
+          "settings": {
+            "collection": "unity-tapware",
+            "image_position": "center center",
+            "heading": "Unity",
+            "description": "<p>Aspire Unity Tapware combines clean geometric styling with practical everyday functionality. Explore basin, bath, shower and wall-mounted mixers in contemporary finishes, designed for modern Australian bathrooms.</p>",
+            "button_label": "Shop Unity Tapware Collection",
+            "button_link": "shopify://collections/unity-tapware",
+            "button_size": "medium",
+            "button_style_secondary": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
         }
       },
       "block_order": [
         "collection_P9AXi6",
         "collection_mTfkgX",
-        "collection_3UFCmh"
+        "collection_3UFCmh",
+        "collection_4QWUAH"
       ],
       "name": "t:sections.tab-collage.presets.name",
       "settings": {
