@@ -371,13 +371,29 @@
             "enable_highlight": false,
             "highlight_style": "marker"
           }
+        },
+        "collection_pbFzWW": {
+          "type": "collection",
+          "settings": {
+            "collection": "zodiac-tapware",
+            "image_position": "center center",
+            "heading": "&nbsp;Zodiac",
+            "description": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Shop Zodiac Tapware",
+            "button_link": "shopify://collections/zodiac-tapware",
+            "button_size": "medium",
+            "button_style_secondary": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
         }
       },
       "block_order": [
         "collection_P9AXi6",
         "collection_mTfkgX",
         "collection_3UFCmh",
-        "collection_4QWUAH"
+        "collection_4QWUAH",
+        "collection_pbFzWW"
       ],
       "name": "t:sections.tab-collage.presets.name",
       "settings": {
