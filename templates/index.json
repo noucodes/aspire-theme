@@ -745,7 +745,7 @@
           "type": "column",
           "settings": {
             "background_color": "#D59E09",
-            "heading_color": "#0A0A0A",
+            "heading_color": "#FFFFFF",
             "text_color": "#333333",
             "title": "Brushed Brass",
             "title_size": "h3",
