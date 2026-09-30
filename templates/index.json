@@ -745,7 +745,7 @@
           "type": "column",
           "settings": {
             "background_color": "#D59E09",
-            "heading_color": "#000000",
+            "heading_color": "#0A0A0A",
             "text_color": "#333333",
             "title": "Brushed Brass",
             "title_size": "h3",
@@ -764,7 +764,7 @@
           "type": "column",
           "settings": {
             "background_color": "#91918F",
-            "heading_color": "#000000",
+            "heading_color": "#0A0A0A",
             "text_color": "#333333",
             "title": "Brushed Nickel",
             "title_size": "h3",
@@ -803,7 +803,7 @@
           "settings": {
             "background_color": "#2b2b2b",
             "heading_color": "#ffffff",
-            "text_color": "#cccccc",
+            "text_color": "#FFFFFF",
             "title": "Matte Black",
             "title_size": "h3",
             "text": "<p>Make a bold statement with Matte Black tapware and fixtures designed to add striking contrast.</p>",
