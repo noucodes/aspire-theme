@@ -73,20 +73,6 @@
     "collection-trust": {
       "type": "guarantees",
       "blocks": {
-        "ctrust-1": {
-          "type": "guarantee",
-          "disabled": true,
-          "settings": {
-            "icon": "truck",
-            "icon_size": "medium",
-            "custom_icon": "",
-            "title": "&nbsp;Product Brochure&nbsp;",
-            "title_size": "h4",
-            "text": "<ul><li>Download our full catalogue</li></ul>",
-            "enable_highlight": false,
-            "highlight_style": "marker"
-          }
-        },
         "ctrust-2": {
           "type": "guarantee",
           "settings": {
@@ -113,24 +99,37 @@
             "highlight_style": "marker"
           }
         },
-        "ctrust-4": {
+        "ctrust-1": {
           "type": "guarantee",
           "settings": {
             "icon": "headset",
             "icon_size": "medium",
             "custom_icon": "",
-            "title": "&nbsp;Expert Advice",
+            "title": "&nbsp;Expert Advice&nbsp;",
             "title_size": "h4",
             "text": "<p>Our team has the product knowledge to help you choose the right fixtures for your space, style, and budget.</p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "ctrust-4": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "truck",
+            "icon_size": "medium",
+            "custom_icon": "",
+            "title": "&nbsp;Shipping&nbsp;",
+            "title_size": "h4",
+            "text": "<p>Fast, straightforward shipping across Australia.</p>",
             "enable_highlight": false,
             "highlight_style": "marker"
           }
         }
       },
       "block_order": [
-        "ctrust-1",
         "ctrust-2",
         "ctrust-3",
+        "ctrust-1",
         "ctrust-4"
       ],
       "settings": {
@@ -139,7 +138,7 @@
         "horizontal_content": false,
         "full_width": true,
         "show_divider": true,
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "heading": "",
         "heading_size": "h1",
         "heading_tag": "h2",
