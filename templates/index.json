@@ -342,31 +342,15 @@
             "highlight_style": "marker"
           }
         },
-        "image_NUt8Kg": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Aspire_Air_4.jpg",
-            "image_position": "center center",
-            "heading": "",
-            "description": "<p>Featuring coordinated finishes and minimalist styling, Air focuses on soft, contemporary forms, while Nuovoair offers a complementary accessory range that completes the look. Together, they deliver a unified design language that makes it easy to achieve a consistent, modern bathroom aesthetic across every touchpoint.</p>",
-            "button_label": "Shop New Range",
-            "button_link": "shopify://collections/aspire-new-range",
-            "button_size": "medium",
-            "button_style_secondary": false,
-            "enable_highlight": false,
-            "highlight_style": "marker"
-          }
-        },
         "collection_3UFCmh": {
           "type": "collection",
           "settings": {
-            "collection": "aspire-nuovoair-collection-premium-bathroom-accessories-for-a-coordinated-finish",
+            "collection": "spring-tapware",
             "image_position": "center center",
-            "heading": "Nuovo Air",
+            "heading": "Spring",
             "description": "<p>The Aspire Nuovoair Collection is a refined range of premium bathroom accessories designed to perfectly complement the Aspire Air tapware series. Created with a strong focus on design consistency, durability, and everyday functionality, Nuovoair brings a unified finishing system to modern bathrooms, ensuring every detail feels intentional and well-resolved.</p>",
-            "button_label": "Shop Nuovoair Collection",
-            "button_link": "shopify://collections/aspire-nuovoair-collection-premium-bathroom-accessories-for-a-coordinated-finish",
+            "button_label": "Shop Spring Tapware",
+            "button_link": "https://aspirebathrooms.com.au/collections/spring-tapware",
             "button_size": "medium",
             "button_style_secondary": false,
             "enable_highlight": false,
@@ -377,7 +361,6 @@
       "block_order": [
         "collection_P9AXi6",
         "collection_mTfkgX",
-        "image_NUt8Kg",
         "collection_3UFCmh"
       ],
       "name": "t:sections.tab-collage.presets.name",
