@@ -101,7 +101,7 @@
             "text": "",
             "text_size": "typeset",
             "button_label": "Shop Sale",
-            "button_link": "shopify://collections/aspire-within-sale",
+            "button_link": "shopify://collections/within",
             "button_size": "medium",
             "button_style_secondary": false,
             "button_alt_label": "Shop Sale",
@@ -741,21 +741,40 @@
     "shop-by-finish": {
       "type": "multicolumn",
       "blocks": {
-        "finish-1": {
+        "column_BC4jM7": {
           "type": "column",
           "settings": {
-            "background_color": "#2b2b2b",
-            "heading_color": "#ffffff",
-            "text_color": "#cccccc",
-            "title": "Matte Black",
+            "background_color": "#D59E09",
+            "heading_color": "#000000",
+            "text_color": "#333333",
+            "title": "Brushed Brass",
             "title_size": "h3",
-            "text": "<p>Sleek and contemporary — our most popular finish.</p>",
+            "text": "<p>Add warmth and character with Brushed Brass tapware and fixtures in a refined, contemporary finish.</p>",
             "show_popup": false,
             "popup_image_position": "top",
             "justify_text": false,
-            "button_label": "Shop Matte Black",
-            "button_link": "/collections/matte-black",
-            "button_style_secondary": true,
+            "button_label": "Shop Brushed Brass",
+            "button_link": "shopify://collections/brushed-brass",
+            "button_style_secondary": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "column_JJVaUh": {
+          "type": "column",
+          "settings": {
+            "background_color": "#91918F",
+            "heading_color": "#000000",
+            "text_color": "#333333",
+            "title": "Brushed Nickel",
+            "title_size": "h3",
+            "text": "<p>Create a soft, sophisticated look with Brushed Nickel tapware and fixtures for modern bathrooms.</p>",
+            "show_popup": false,
+            "popup_image_position": "top",
+            "justify_text": false,
+            "button_label": "Shop Brushed Nickel",
+            "button_link": "",
+            "button_style_secondary": false,
             "enable_highlight": false,
             "highlight_style": "marker"
           }
@@ -768,12 +787,31 @@
             "text_color": "#333333",
             "title": "Chrome",
             "title_size": "h3",
-            "text": "<p>Classic, timeless and easy to maintain.</p>",
+            "text": "<p>Keep it classic with polished Chrome tapware and fixtures that suit a wide range of bathroom styles.</p>",
             "show_popup": false,
             "popup_image_position": "top",
             "justify_text": false,
             "button_label": "Shop Chrome",
             "button_link": "/collections/chrome",
+            "button_style_secondary": true,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "finish-1": {
+          "type": "column",
+          "settings": {
+            "background_color": "#2b2b2b",
+            "heading_color": "#ffffff",
+            "text_color": "#cccccc",
+            "title": "Matte Black",
+            "title_size": "h3",
+            "text": "<p>Make a bold statement with Matte Black tapware and fixtures designed to add striking contrast.</p>",
+            "show_popup": false,
+            "popup_image_position": "top",
+            "justify_text": false,
+            "button_label": "Shop Matte Black",
+            "button_link": "/collections/matte-black",
             "button_style_secondary": true,
             "enable_highlight": false,
             "highlight_style": "marker"
@@ -787,7 +825,7 @@
             "text_color": "#f0f0f0",
             "title": "Stainless Steel",
             "title_size": "h3",
-            "text": "<p>Durable and corrosion-resistant for lasting performance.</p>",
+            "text": "<p>Choose Stainless Steel tapware and fixtures for a clean, contemporary look with practical appeal.</p>",
             "show_popup": false,
             "popup_image_position": "top",
             "justify_text": false,
@@ -800,8 +838,10 @@
         }
       },
       "block_order": [
-        "finish-1",
+        "column_BC4jM7",
+        "column_JJVaUh",
         "finish-2",
+        "finish-1",
         "finish-3"
       ],
       "settings": {
@@ -810,7 +850,7 @@
         "text_alignment": "center",
         "show_divider": false,
         "image_width": "full",
-        "columns_desktop": 3,
+        "columns_desktop": 5,
         "open_in_new_tab": false,
         "heading": "Shop by Finish",
         "heading_size": "h1",
