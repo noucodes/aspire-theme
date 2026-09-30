@@ -773,7 +773,7 @@
             "popup_image_position": "top",
             "justify_text": false,
             "button_label": "Shop Brushed Nickel",
-            "button_link": "",
+            "button_link": "shopify://collections/brushed-nickel",
             "button_style_secondary": true,
             "enable_highlight": false,
             "highlight_style": "marker"
