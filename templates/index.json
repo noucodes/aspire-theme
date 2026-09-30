@@ -312,8 +312,39 @@
     "tab_collage_76hnbn": {
       "type": "tab-collage",
       "blocks": {
+        "collection_P9AXi6": {
+          "type": "collection",
+          "settings": {
+            "collection": "air",
+            "image_position": "center center",
+            "heading": "Air",
+            "description": "<p>The Aspire Air Collection is a premium range of modern bathroom tapware, showers designed to bring soft curves, refined detailing, and cohesive styling into contemporary interiors. Built for both residential and commercial projects, the Air Collection delivers a unified design language across every product, making it easy to achieve a consistent and elevated bathroom aesthetic.</p>",
+            "button_label": "Shop Air Collection",
+            "button_link": "https://aspirebathrooms.com.au/collections/air",
+            "button_size": "medium",
+            "button_style_secondary": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "collection_mTfkgX": {
+          "type": "collection",
+          "settings": {
+            "collection": "aspire-nuovo-collection-modern-square-tapware-with-refined-design",
+            "image_position": "center center",
+            "heading": "Nuovo",
+            "description": "<p>The Aspire Nuovo Collection reimagines classic square tapware with a softer, more contemporary edge, delivering a refined architectural look for modern bathrooms. Designed with clean lines, balanced proportions, and subtle detailing, Nuovo offers a bold yet sophisticated aesthetic that enhances a wide range of interior styles.</p>",
+            "button_label": "Shop Nuovo Collection",
+            "button_link": "https://aspirebathrooms.com.au/collections/nuovo",
+            "button_size": "medium",
+            "button_style_secondary": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
         "image_NUt8Kg": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Aspire_Air_4.jpg",
             "image_position": "center center",
@@ -321,21 +352,6 @@
             "description": "<p>Featuring coordinated finishes and minimalist styling, Air focuses on soft, contemporary forms, while Nuovoair offers a complementary accessory range that completes the look. Together, they deliver a unified design language that makes it easy to achieve a consistent, modern bathroom aesthetic across every touchpoint.</p>",
             "button_label": "Shop New Range",
             "button_link": "shopify://collections/aspire-new-range",
-            "button_size": "medium",
-            "button_style_secondary": false,
-            "enable_highlight": false,
-            "highlight_style": "marker"
-          }
-        },
-        "collection_P9AXi6": {
-          "type": "collection",
-          "settings": {
-            "collection": "aspire-air-collection-premium-modern-bathroom-tapware-accessories",
-            "image_position": "center center",
-            "heading": "Air",
-            "description": "<p>The Aspire Air Collection is a premium range of modern bathroom tapware, showers, and accessories designed to bring soft curves, refined detailing, and cohesive styling into contemporary interiors. Built for both residential and commercial projects, the Air Collection delivers a unified design language across every product, making it easy to achieve a consistent and elevated bathroom aesthetic.</p>",
-            "button_label": "Shop Air Collection",
-            "button_link": "shopify://collections/aspire-air-collection-premium-modern-bathroom-tapware-accessories",
             "button_size": "medium",
             "button_style_secondary": false,
             "enable_highlight": false,
@@ -356,28 +372,13 @@
             "enable_highlight": false,
             "highlight_style": "marker"
           }
-        },
-        "collection_mTfkgX": {
-          "type": "collection",
-          "settings": {
-            "collection": "nuovo",
-            "image_position": "center center",
-            "heading": "Nuovo",
-            "description": "<p>The Aspire Nuovo Collection reimagines classic square tapware with a softer, more contemporary edge, delivering a refined architectural look for modern bathrooms. Designed with clean lines, balanced proportions, and subtle detailing, Nuovo offers a bold yet sophisticated aesthetic that enhances a wide range of interior styles.</p>",
-            "button_label": "Shop Nuovo Collection",
-            "button_link": "https://aspirebathrooms.com.au/collections/aspire-nuovo-collection-modern-square-tapware-with-refined-design",
-            "button_size": "medium",
-            "button_style_secondary": false,
-            "enable_highlight": false,
-            "highlight_style": "marker"
-          }
         }
       },
       "block_order": [
-        "image_NUt8Kg",
         "collection_P9AXi6",
-        "collection_3UFCmh",
-        "collection_mTfkgX"
+        "collection_mTfkgX",
+        "image_NUt8Kg",
+        "collection_3UFCmh"
       ],
       "name": "t:sections.tab-collage.presets.name",
       "settings": {
