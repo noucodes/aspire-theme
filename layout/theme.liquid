@@ -51,6 +51,28 @@
 
     {{ content_for_header }}
 
+    <!-- OpenAI Ads measurement pixel -->
+    <script>
+      (function (w, d, s, u) {
+        if (w.oaiq) return;
+        var q = function () { q.q.push(arguments); };
+        q.q = [];
+        w.oaiq = q;
+        var js = d.createElement(s);
+        js.async = true;
+        js.src = u;
+        var f = d.getElementsByTagName(s)[0];
+        f.parentNode.insertBefore(js, f);
+      })(window, document, 'script', 'https://bzrcdn.openai.com/sdk/oaiq.min.js');
+      oaiq('init', { pixelId: '7LuhwQzuFYCES1pCuRD2gx' });
+      // ponytail: checkout pages don't run theme code, so fire on the checkout button click (cart page + mini cart)
+      document.addEventListener('click', function (e) {
+        if (e.target.closest('[name="checkout"], a[href*="/checkout"]')) {
+          oaiq('measure', 'checkout_started', { type: 'contents' });
+        }
+      });
+    </script>
+
     {%- liquid
       render 'css-variables'
       echo 'base.css' | asset_url | stylesheet_tag: preload: true
